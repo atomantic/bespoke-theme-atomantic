@@ -5,67 +5,167 @@
     <meta name="description" content="A theme for Bespoke.js">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="build/build.css">
   </head>
   <body>
     <article>
       <section>
-        <div class="fullscreen">
-          <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
-        </div>
-        <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com">gideon de villiers</a></div>
-        <div class="content">
-          <div class="box">
+        <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
+        <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
+        <div class="content left">
+          <div id="intro" class="box">
             <h1>bespoke-theme-atomantic</h1>
-            <h2>A Bespoke.js theme by <a href="https://github.com/atomantic">Adam Eivy</a></h2>
+            <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
+            <div class="mid">by</div>
+            <div class="me center"></div>
+            <h2>\[._.]/ <a href="http://adameivy.com" target="off">Adam Eivy</a></h2>
+            <audio id="audio" controls loop>
+              <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
+              <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
+            </audio>
           </div>
         </div>
       </section>
       <section>
-        <div class="fullscreen">
-          <x-gif src="images/madness.gif" fill n-times="1"></x-gif>
-        </div>
+        <x-gif src="images/madness.gif" fill n-times="1"></x-gif>
         <div class="content wait-for-gif">
           <div class="box">
             <h1>Content</h1>
             <div class="mid">that</div>
             <h2>waits for gif completion</h2>
+            <pre><code class="language-jade">section
+  x-gif(src="images/madness.gif" fill n-times=1)
+  .content.wait-for-gif
+    .box
+      h1 Content
+      ...
+</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="blueprint">
+        <div class="content">
+          <div class="box">
+            <h2>CSS Backgrounds</h2>
+            <pre><code class="language-jade">section.blueprint</code></pre>
+            <div id="backgrounds" class="actionable">
+              <div class="em-orange">.blueprint</div>
+              <div class="em-blue">.carbon</div>
+              <div class="em-blue">.carbonfiber</div>
+              <div class="em-blue">.cubes</div>
+              <div class="em-blue">.honeycomb</div>
+              <div class="em-blue">.paper</div>
+              <div class="em-blue">.seigaiha</div>
+              <div class="em-blue">.shippo</div>
+              <div class="em-blue">.wave</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cubes">
+        <div class="content">
+          <div class="box">
+            <h2>Content Positioning</h2>
+            <pre><code class="language-jade">.content
+  .box
+    h2 Content Positioning</code></pre>
+            <div id="position" class="actionable">
+              <div class="em-orange">centered (default)</div>
+              <div class="em-blue">.top</div>
+              <div class="em-blue">.left</div>
+              <div class="em-blue">.right</div>
+              <div class="em-blue">.bottom</div>
+            </div>
           </div>
         </div>
       </section>
       <section>
-        <div class="fullscreen blackthread"></div>
+        <div class="fullscreen"><img src="images/spaceman.jpeg"></div>
+        <div class="content bottom fadeout">
+          <div class="box">
+            <h2>Static Background Images</h2>
+            <pre><code class="language-jade">section
+  .fullscreen
+    img(src="images/spaceman.jpeg")
+  .content.bottom
+    .box
+      h2 Static Background Images
+</code></pre>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div ui-fx="blur2" class="fullscreen"><img src="images/spaceman.jpeg"></div>
+        <div class="content bottom">
+          <div class="box">
+            <h2>Blurred Background Images</h2>
+            <pre><code class="language-jade">section
+  .fullscreen(ui-fx="blur2")
+    img(src="images/spaceman.jpeg")
+  .content.bottom
+    .box
+      h2 Blurred Background Images
+  </code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="wave">
         <div class="content">
           <div class="box">
             <h1>Boxed Content</h1>
+            <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
+            <pre><code class="language-jade">p and
+  span.em-green really
+  span.em-orange emphatic
+  span.em-red text 
+  span.em-yellow colors
+  span.em-blue yo!
+</code></pre>
           </div>
         </div>
       </section>
       <section>
         <h1 class="bullet">Paragraph</h1>
-        <p class="bullet">In eu diam sed mi blandit pulvinar.</p>
+        <p class="bullet">bullet content</p>
+        <pre><code class="language-jade">section
+  h1.bullet Paragraph
+  p.bullet bullet content
+</code></pre>
       </section>
       <section>
         <h1 class="bullet">Unordered List</h1>
         <ul>
-          <li>In eu diam sed mi blandit pulvinar.</li>
-          <li>Etiam hendrerit nunc ut tortor interdum faucibus.</li>
-          <li>Nulla eget nibh et enim sagittis dictum.</li>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
         </ul>
       </section>
       <section data-bespoke-backdrop="emphatic" class="emphatic-text">
-        <h1>Emphatic Slide</h1>
-      </section>
-      <section>
         <div class="fullscreen">
-          <x-gif src="images/space.gif" fill speed=".6"></x-gif>
+          <x-gif src="images/ohboy.gif" fill n-times-1></x-gif>
         </div>
         <div class="content">
           <div class="box">
-            <h1 class="bullet">Enjoy <span class='bullet'>:)</span></h1>
+            <h1>Emphatic Slide</h1>
           </div>
         </div>
       </section>
-    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-grey@2x.png" alt="Fork me on GitHub"></a>
+      <section>
+        <div ui-fx="blur2" class="fullscreen">
+          <x-gif src="images/perfect_horse.gif" fill n-times="2"></x-gif>
+        </div>
+        <div data-bespoke-state="light" class="content">
+          <div class="box darken">
+            <div class="mid">Thanks!</div>
+            <div class="line">
+              <div class="me center"></div>
+            </div>
+            <h2>\[._.]/ Adam Eivy</h2>
+            <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a href="#1" class="back">&nbsp; restart</a></small>
+          </div>
+        </div>
+      </section>
+    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
     <script src="build/build.js"></script>
   </body>
 </html>
