@@ -12,81 +12,71 @@
       <section>
         <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
         <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
-        <div class="content left">
-          <div id="intro" class="box">
-            <h1>bespoke-theme-atomantic</h1>
-            <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
-            <div class="mid">by</div>
-            <div class="me center"></div>
-            <h2>\[._.]/ <a href="http://adameivy.com" target="off">Adam Eivy</a></h2>
-            <audio id="audio" controls loop>
-              <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
-              <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
-            </audio>
-          </div>
+        <div id="intro" class="box left">
+          <h1>bespoke-theme-atomantic</h1>
+          <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
+          <div class="mid">by</div>
+          <div class="me center"></div>
+          <h2>\[._.]/ <a href="http://adameivy.com" target="off">Adam Eivy</a></h2>
+          <audio id="audio" controls loop>
+            <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
+            <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
+          </audio>
         </div>
       </section>
       <section>
         <x-gif src="images/madness.gif" fill n-times="1"></x-gif>
-        <div class="content wait-for-gif">
-          <div class="box">
-            <h1>Content</h1>
-            <div class="mid">that</div>
-            <h2>waits for gif completion</h2>
-            <pre><code class="language-jade">section
+        <div class="box wait-for-gif">
+          <h1>Content</h1>
+          <div class="mid">that</div>
+          <h2>waits for gif completion</h2>
+          <pre><code class="language-jade">section
   x-gif(src="images/madness.gif" fill n-times=1)
-  .content.wait-for-gif
-    .box
+    .box.wait-for-gif
       h1 Content
       ...
 </code></pre>
-          </div>
         </div>
       </section>
       <section class="blueprint">
-        <div class="content">
-          <div class="box">
-            <h2>CSS Backgrounds</h2>
-            <pre><code class="language-jade">section.blueprint</code></pre>
-            <div id="backgrounds" class="actionable">
-              <div class="em-orange">.blueprint</div>
-              <div class="em-blue">.carbon</div>
-              <div class="em-blue">.carbonfiber</div>
-              <div class="em-blue">.cubes</div>
-              <div class="em-blue">.honeycomb</div>
-              <div class="em-blue">.paper</div>
-              <div class="em-blue">.seigaiha</div>
-              <div class="em-blue">.shippo</div>
-              <div class="em-blue">.wave</div>
-            </div>
+        <div class="box">
+          <h2>CSS Backgrounds</h2>
+          <pre><code class="language-jade">section.blueprint</code></pre>
+          <div id="backgrounds" class="actionable">
+            <div class="em-orange">.blueprint</div>
+            <div class="em-blue">.carbon</div>
+            <div class="em-blue">.carbonfiber</div>
+            <div class="em-blue">.cubes</div>
+            <div class="em-blue">.honeycomb</div>
+            <div class="em-blue">.paper</div>
+            <div class="em-blue">.seigaiha</div>
+            <div class="em-blue">.shippo</div>
+            <div class="em-blue">.wave</div>
           </div>
         </div>
       </section>
       <section class="cubes">
-        <div class="content">
-          <div class="box">
-            <h2>Content Positioning</h2>
-            <pre><code class="language-jade">.content
-  .box
-    h2 Content Positioning</code></pre>
-            <div id="position" class="actionable">
-              <div class="em-orange">centered (default)</div>
-              <div class="em-blue">.top</div>
-              <div class="em-blue">.left</div>
-              <div class="em-blue">.right</div>
-              <div class="em-blue">.bottom</div>
-            </div>
+        <div class="box">
+          <h2>Content Positioning</h2>
+          <pre><code class="language-jade">.box
+  h2 Content Positioning</code></pre>
+          <div id="position" class="actionable">
+            <div class="em-orange">centered (default)</div>
+            <div class="em-blue">.top</div>
+            <div class="em-blue">.left</div>
+            <div class="em-blue">.right</div>
+            <div class="em-blue">.bottom</div>
           </div>
         </div>
       </section>
       <section>
-        <div class="fullscreen"><img src="images/spaceman.jpeg"></div>
+        <div class="fullscreen"><img src="images/spaceman.jpeg" class="fillwb"></div>
         <div class="content bottom fadeout">
           <div class="box">
             <h2>Static Background Images</h2>
             <pre><code class="language-jade">section
   .fullscreen
-    img(src="images/spaceman.jpeg")
+    img.fillwb(src="images/spaceman.jpeg")
   .content.bottom
     .box
       h2 Static Background Images
@@ -95,13 +85,13 @@
         </div>
       </section>
       <section>
-        <div ui-fx="blur2" class="fullscreen"><img src="images/spaceman.jpeg"></div>
+        <div ui-fx="blur2" class="fullscreen"><img src="images/spaceman.jpeg" class="fillwb"></div>
         <div class="content bottom">
           <div class="box">
             <h2>Blurred Background Images</h2>
             <pre><code class="language-jade">section
   .fullscreen(ui-fx="blur2")
-    img(src="images/spaceman.jpeg")
+    img.fillwb(src="images/spaceman.jpeg")
   .content.bottom
     .box
       h2 Blurred Background Images
