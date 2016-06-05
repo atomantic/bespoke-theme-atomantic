@@ -42,7 +42,7 @@
         <div class="box">
           <h2>CSS Backgrounds</h2>
           <pre><code class="language-jade">section.blueprint</code></pre>
-          <div id="backgrounds" class="actionable">
+          <div data-elem="section" data-classes="bespoke-slide bespoke-active" class="actionable">
             <div class="em-orange">.blueprint</div>
             <div class="em-blue">.carbon</div>
             <div class="em-blue">.carbonfiber</div>
@@ -60,74 +60,59 @@
           <h2>Content Positioning</h2>
           <pre><code class="language-jade">.box
   h2 Content Positioning</code></pre>
-          <div id="position" class="actionable">
-            <div class="em-orange">centered (default)</div>
+          <div data-elem=".box" class="actionable">
+            <div class="em-orange">(default)</div>
             <div class="em-blue">.top</div>
-            <div class="em-blue">.left</div>
             <div class="em-blue">.right</div>
             <div class="em-blue">.bottom</div>
+            <div class="em-blue">.left</div>
           </div>
         </div>
       </section>
-      <section>
-        <div class="fullscreen"><img src="images/spaceman.jpeg" class="fillwb"></div>
-        <div class="content bottom fadeout">
-          <div class="box">
-            <h2>Static Background Images</h2>
-            <pre><code class="language-jade">section
-  .fullscreen
-    img.fillwb(src="images/spaceman.jpeg")
-  .content.bottom
-    .box
-      h2 Static Background Images
-</code></pre>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div ui-fx="blur2" class="fullscreen"><img src="images/spaceman.jpeg" class="fillwb"></div>
-        <div class="content bottom">
-          <div class="box">
-            <h2>Blurred Background Images</h2>
-            <pre><code class="language-jade">section
-  .fullscreen(ui-fx="blur2")
-    img.fillwb(src="images/spaceman.jpeg")
-  .content.bottom
-    .box
-      h2 Blurred Background Images
-  </code></pre>
+      <section><img src="images/spaceman.jpeg" class="fillwb">
+        <div class="box bottom">
+          <h2>Background Image Effects</h2>
+          <pre><code class="language-jade">section
+  img.fillwb(src="images/spaceman.jpeg")
+  .box.bottom
+    h2 Static Background Images</code></pre>
+          <div data-elem="img" data-classes="fillwb" class="actionable">
+            <div class="em-orange">(default)</div>
+            <div class="em-blue">.blur1</div>
+            <div class="em-blue">.blur2</div>
+            <div class="em-blue">.blur3</div>
+            <div class="em-blue">.opac20</div>
+            <div class="em-blue">.opac50</div>
+            <div class="em-blue">.opac80</div>
           </div>
         </div>
       </section>
       <section class="wave">
-        <div class="content">
-          <div class="box">
-            <h1>Boxed Content</h1>
-            <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
-            <pre><code class="language-jade">p and
+        <div class="box">
+          <h1>Boxed Content</h1>
+          <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
+          <pre><code class="language-jade">p and
   span.em-green really
   span.em-orange emphatic
   span.em-red text 
   span.em-yellow colors
   span.em-blue yo!
-  </code></pre>
-          </div>
+</code></pre>
         </div>
       </section>
       <section class="white">
-        <div class="content">
-          <div class="box">
-            <h1>Boxed Content Shades</h1>
-            <pre><code class="language-jade">section.white
+        <div class="box">
+          <h1>Boxed Content Shades</h1>
+          <pre><code class="language-jade">section.white
   .content
     .box
       h1 Boxed Content Shades</code></pre>
-            <div id="shades" class="actionable">
-              <div class="em-orange">(default)</div>
-              <div class="em-blue">.darken</div>
-              <div class="em-blue">.darker</div>
-              <div class="em-blue">.black</div>
-            </div>
+          <div data-elem=".box" class="actionable">
+            <div class="em-orange">(default)</div>
+            <div class="em-blue">.transparent</div>
+            <div class="em-blue">.darken</div>
+            <div class="em-blue">.darker</div>
+            <div class="em-blue">.black</div>
           </div>
         </div>
       </section>
@@ -141,30 +126,26 @@
       </section>
       <section>
         <x-gif src="images/ohboy.gif" fill n-times="1"></x-gif>
-        <div class="content">
-          <div class="box">
-            <h1 class="bullet">Unordered List</h1>
-            <ul>
-              <li>item 1</li>
-              <li>item 2</li>
-              <li>item 3</li>
-            </ul>
-          </div>
+        <div class="box">
+          <h1 class="bullet">Unordered List</h1>
+          <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ul>
         </div>
       </section>
       <section>
         <div ui-fx="blur2" class="fullscreen">
           <x-gif src="images/perfect_horse.gif" fill n-times="2"></x-gif>
         </div>
-        <div data-bespoke-state="light" class="content">
-          <div class="box darken">
-            <div class="mid">Thanks!</div>
-            <div class="line">
-              <div class="me center"></div>
-            </div>
-            <h2>\[._.]/ Adam Eivy</h2>
-            <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a href="#1" class="back">&nbsp; restart</a></small>
+        <div class="box darken">
+          <div class="mid">Thanks!</div>
+          <div class="line">
+            <div class="me center"></div>
           </div>
+          <h2>\[._.]/ Adam Eivy</h2>
+          <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a href="#1" class="back">&nbsp; restart</a></small>
         </div>
       </section>
     </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
