@@ -10743,13 +10743,17 @@ if ('registerElement' in document
   && 'content' in document.createElement('template')) {
   // We're using a browser with native WC support!
 } else {
+  // note: currently platform.js is broken in safari and other browsers:
+  // https://github.com/geelen/x-gif/issues/33
+  //document.write('<script src="x-gif/platform.js"><\/script>');
+  // using newer webcomponents library
+  var tag = document.createElement('script');
+  tag.src = "https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js";
+  document.head.appendChild(tag);
   var bs = document.getElementById('browsersupport');
   if(bs){
     bs.className = bs.className.replace('hide','')
   }
-  // note: currently platform.js is broken in safari and other browsers:
-  // https://github.com/geelen/x-gif/issues/33
-  //document.write('<script src="x-gif/platform.js"><\/script>');
 }
 // drop the x-gif element at the bottom of the page
 var link = document.createElement('link');
