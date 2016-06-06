@@ -14,6 +14,7 @@
         <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
         <div id="intro" class="box left">
           <h1>bespoke-theme-atomantic</h1>
+          <h5 id="browsersupport" class="em-red hide">(best in Google Chrome)</h5>
           <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
           <div class="mid">by</div>
           <div class="me center"></div>
@@ -31,10 +32,10 @@
           <div class="mid">that</div>
           <h2>waits for gif completion</h2>
           <pre><code class="language-jade">section
-  x-gif(src="images/madness.gif" fill n-times=1)
-    .box.wait-for-gif
-      h1 Content
-      ...
+	x-gif(src="images/madness.gif" fill n-times=1)
+		.box.wait-for-gif
+			h1 Content
+			...
 </code></pre>
         </div>
       </section>
@@ -59,7 +60,7 @@
         <div class="box">
           <h2>Content Positioning</h2>
           <pre><code class="language-jade">.box
-  h2 Content Positioning</code></pre>
+	h2 Content Positioning</code></pre>
           <div data-elem=".box" class="actionable">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.top</div>
@@ -73,9 +74,8 @@
         <div class="box bottom">
           <h2>Background Image Effects</h2>
           <pre><code class="language-jade">section
-  img.fillwb(src="images/spaceman.jpeg")
-  .box.bottom
-    h2 Static Background Images</code></pre>
+	img.fillwb(src="images/spaceman.jpeg")
+	.box.bottom</code></pre>
           <div data-elem="img" data-classes="fillwb" class="actionable">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.blur1</div>
@@ -87,52 +87,122 @@
           </div>
         </div>
       </section>
+      <section><img src="images/spaceman.jpeg" class="fillwb">
+        <div class="box bottom">
+          <h2>Background Image Size/Position</h2>
+          <pre><code class="language-jade">section
+	img.fillwb(src="images/spaceman.jpeg")</code></pre>
+          <div data-elem="img" class="actionable">
+            <div class="em-blue">(default)</div>
+            <div class="em-blue">.fill</div>
+            <div class="em-blue">.fillh</div>
+            <div class="em-blue">.fillw</div>
+            <div class="em-orange">.fillwb</div>
+          </div>
+        </div>
+      </section>
       <section class="wave">
         <div class="box">
           <h1>Boxed Content</h1>
           <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
           <pre><code class="language-jade">p and
-  span.em-green really
-  span.em-orange emphatic
-  span.em-red text 
-  span.em-yellow colors
-  span.em-blue yo!
+	span.em-green really
+	span.em-orange emphatic
+	span.em-red text 
+	span.em-yellow colors
+	span.em-blue yo!
 </code></pre>
         </div>
       </section>
-      <section class="white">
+      <section class="shippo grey">
         <div class="box">
           <h1>Boxed Content Shades</h1>
-          <pre><code class="language-jade">section.white
-  .content
-    .box
-      h1 Boxed Content Shades</code></pre>
+          <pre><code class="language-jade">section.shippo.grey
+	.content
+		.box
+			h1 Boxed Content Shades</code></pre>
           <div data-elem=".box" class="actionable">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.transparent</div>
-            <div class="em-blue">.darken</div>
-            <div class="em-blue">.darker</div>
+            <div class="em-blue">.white</div>
             <div class="em-blue">.black</div>
+            <div class="em-blue">.grey</div>
+            <div class="em-blue">.blue</div>
+            <div class="em-blue">.midnight</div>
+            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.cocoa</div>
           </div>
         </div>
       </section>
       <section>
         <h1 class="bullet">Paragraph</h1>
         <p class="bullet">bullet content</p>
+        <h2>and this is a <span class="nope">bad</span>&nbsp;great thing</h2>
         <pre><code class="language-jade">section
-  h1.bullet Paragraph
-  p.bullet bullet content
+	h1.bullet Paragraph
+	p.bullet bullet content
+	h2 and this is a 
+		span.nope bad
+		| &nbsp;great thing
 </code></pre>
+      </section>
+      <section>
+        <div class="box">
+          <h1>h1 Heading</h1>
+          <h2>h2 Heading</h2>
+          <h3>h3 Heading</h3>
+          <h4>h4 Heading</h4>
+          <h5>h5 Heading</h5>
+        </div>
+      </section>
+      <section>
+        <div class="box">
+          <h1>Text Styles</h1>
+          <p>this is a p tag</p>
+          <p class="code">and a p.code tag is monospace</p>
+          <div class="mid">but</div>
+          <p>^ is .mid</p>
+        </div>
+      </section>
+      <section>
+        <div class="box">
+          <h1>Unordered Lists</h1>
+          <ul>
+            <li>Section 1
+              <ul>
+                <li>Awesome things</li>
+                <li>Even more awesome</li>
+              </ul>
+            </li>
+            <li>Section 2
+              <ul>
+                <li>Continue Awesome</li>
+                <li>Advanced</li>
+              </ul>
+            </li>
+            <li>Keeping it real</li>
+          </ul>
+        </div>
       </section>
       <section>
         <x-gif src="images/ohboy.gif" fill n-times="1"></x-gif>
         <div class="box">
-          <h1 class="bullet">Unordered List</h1>
-          <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-          </ul>
+          <h1>Ordered Lists</h1>
+          <ol>
+            <li>Section 1
+              <ol>
+                <li>Awesome things</li>
+                <li>Even more awesome</li>
+              </ol>
+            </li>
+            <li>Section 2
+              <ol>
+                <li>Continue Awesome</li>
+                <li>Advanced</li>
+              </ol>
+            </li>
+            <li>Keeping it real</li>
+          </ol>
         </div>
       </section>
       <section>
