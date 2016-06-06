@@ -10775,7 +10775,10 @@ document.addEventListener('keyup', function(e) {
   }
   console.log(e.keyCode);
   if (e.keyCode == 82) { // r
-    document.querySelector('.rotate,.spin').classList.toggle('on');
+    var anims = document.querySelectorAll('.rotate, .spin');
+    for(i=0;i<anims.length;i++){
+      anims[i].classList.toggle('on');
+    }
   }
 });
 
