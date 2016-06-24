@@ -12,15 +12,15 @@
       <section>
         <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
         <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
-        <div id="intro" title="Swipe or use arrow keys to navigate" data-position="top center" data-noarrow="1" class="box left notify">
+        <div class="box left notify" id="intro" title="Swipe or use arrow keys to navigate" data-position="top center" data-noarrow="1">
           <h1>bespoke-theme-atomantic</h1>
-          <h5 id="browsersupport" class="em-red hide">(best in Google Chrome)</h5>
+          <h5 class="em-red hide" id="browsersupport">(best in Google Chrome)</h5>
           <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
           <div class="mid">by</div>
           <div class="me center"></div>
           <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span> </h2>
-          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square" class="animated pulse"></a></h4>
-          <audio id="audio" controls loop title="optionally, press play for soundtrack" data-position="bottom center" class="notify">
+          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img class="animated pulse" src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
+          <audio class="notify" id="audio" controls loop title="optionally, press play for soundtrack" data-position="bottom center">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
           </audio>
@@ -41,10 +41,10 @@
         </div>
       </section>
       <section class="carbonfiber">
-        <div title="click to change" data-position="bottom center" class="box notify">
+        <div class="box notify" title="click to change" data-position="bottom center">
           <h2>CSS Backgrounds</h2>
           <pre><code class="language-jade">section.carbonfiber</code></pre>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color" class="actionable background">
+          <div class="actionable background" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color">
             <div class="em-blue">.blueprint</div>
             <div class="em-blue">.carbon</div>
             <div class="em-orange">.carbonfiber</div>
@@ -56,7 +56,7 @@
             <div class="em-blue">.wave</div>
           </div>
           <h4>some work well with color classes to tint</h4>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background" class="actionable color">
+          <div class="actionable color" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background">
             <div class="em-blue">.white</div>
             <div class="em-blue">.red</div>
             <div class="em-blue">.black</div>
@@ -72,7 +72,7 @@
         <div class="box">
           <h2>Tiny Image Tile Backgrounds</h2>
           <pre><code class="language-jade">section.woodtilecolor.cocoa</code></pre>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color" class="actionable background">
+          <div class="actionable background" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color">
             <div class="em-blue">.blackthread</div>
             <div class="em-blue">.brickwalldark</div>
             <div class="em-blue">.brickwall</div>
@@ -93,7 +93,7 @@
             <div class="em-blue">.xv</div>
           </div>
           <h4>You can also add color classes to tint</h4>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background" class="actionable color">
+          <div class="actionable color" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background">
             <div class="em-blue">.white</div>
             <div class="em-blue">.red</div>
             <div class="em-blue">.black</div>
@@ -110,7 +110,7 @@
           <h2>Content Positioning</h2>
           <pre><code class="language-jade">.box
 	h2 Content Positioning</code></pre>
-          <div data-elem=".box" class="actionable">
+          <div class="actionable" data-elem=".box">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.top</div>
             <div class="em-blue">.right</div>
@@ -119,13 +119,13 @@
           </div>
         </div>
       </section>
-      <section><img src="images/spaceman.jpeg" class="fillwb">
+      <section><img class="fillwb" src="images/spaceman.jpeg">
         <div class="box bottom">
           <h2>Background Image Effects</h2>
           <pre><code class="language-jade">section
 	img.fillwb(src="images/spaceman.jpeg")
 	.box.bottom</code></pre>
-          <div data-elem="img" data-classes="fillwb" class="actionable">
+          <div class="actionable" data-elem="img" data-classes="fillwb">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.blur1</div>
             <div class="em-blue">.blur2</div>
@@ -137,12 +137,12 @@
           </div>
         </div>
       </section>
-      <section><img src="images/spaceman.jpeg" class="fillwb">
+      <section><img class="fillwb" src="images/spaceman.jpeg">
         <div class="box bottom">
           <h2>Background Image Size/Position</h2>
           <pre><code class="language-jade">section
 	img.fillwb(src="images/spaceman.jpeg")</code></pre>
-          <div data-elem="img" class="actionable">
+          <div class="actionable" data-elem="img">
             <div class="em-blue">(default)</div>
             <div class="em-blue">.fill</div>
             <div class="em-blue">.fillh</div>
@@ -169,7 +169,7 @@
           <h1><span class="em-blue">.box</span> Tints</h1>
           <pre><code class="language-jade">section.shippo.jellybean
 	.box</code></pre>
-          <div data-elem=".box" class="actionable">
+          <div class="actionable" data-elem=".box">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.transparent</div>
             <div class="em-blue">.white</div>
@@ -286,11 +286,11 @@
             <div class="me center"></div>
           </div>
           <h2>\[._.]/ Adam Eivy</h2>
-          <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a href="#1" class="back">&nbsp; restart</a></small>
+          <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a class="back" href="#1">&nbsp; restart</a></small>
           <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
         </div>
       </section>
-    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
+    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
     <script src="build/build.js"></script>
   </body>
 </html>
