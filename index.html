@@ -12,14 +12,15 @@
       <section>
         <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
         <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
-        <div id="intro" class="box left">
+        <div id="intro" title="Swipe or use arrow keys to navigate" data-position="top center" data-noarrow="1" class="box left notify">
           <h1>bespoke-theme-atomantic</h1>
           <h5 id="browsersupport" class="em-red hide">(best in Google Chrome)</h5>
           <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
           <div class="mid">by</div>
           <div class="me center"></div>
           <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span> </h2>
-          <audio id="audio" controls loop>
+          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square" class="animated pulse"></a></h4>
+          <audio id="audio" controls loop title="optionally, press play for soundtrack" data-position="bottom center" class="notify">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
           </audio>
@@ -33,20 +34,20 @@
           <h2>waits for gif completion</h2>
           <pre><code class="language-jade">section
 	x-gif(src="images/madness.gif" fill n-times=1)
-		.box.wait-for-gif
-			h1 Content
-			...
+	.box.wait-for-gif
+		h1 Content
+		...
 </code></pre>
         </div>
       </section>
-      <section class="blueprint">
-        <div class="box">
+      <section class="carbonfiber">
+        <div title="click to change" data-position="bottom center" class="box notify">
           <h2>CSS Backgrounds</h2>
-          <pre><code class="language-jade">section.blueprint</code></pre>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" class="actionable">
-            <div class="em-orange">.blueprint</div>
+          <pre><code class="language-jade">section.carbonfiber</code></pre>
+          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color" class="actionable background">
+            <div class="em-blue">.blueprint</div>
             <div class="em-blue">.carbon</div>
-            <div class="em-blue">.carbonfiber</div>
+            <div class="em-orange">.carbonfiber</div>
             <div class="em-blue">.cubes</div>
             <div class="em-blue">.honeycomb</div>
             <div class="em-blue">.paper</div>
@@ -54,13 +55,24 @@
             <div class="em-blue">.shippo</div>
             <div class="em-blue">.wave</div>
           </div>
+          <h4>some work well with color classes to tint</h4>
+          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background" class="actionable color">
+            <div class="em-blue">.white</div>
+            <div class="em-blue">.red</div>
+            <div class="em-blue">.black</div>
+            <div class="em-blue">.grey</div>
+            <div class="em-blue">.blue</div>
+            <div class="em-blue">.midnight</div>
+            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.cocoa</div>
+          </div>
         </div>
       </section>
-      <section class="gplay blue">
+      <section class="woodtilecolor cocoa">
         <div class="box">
           <h2>Tiny Image Tile Backgrounds</h2>
-          <pre><code class="language-jade">section.gplay.blue</code></pre>
-          <div data-elem="section" data-classes="bespoke-slide bespoke-active" class="actionable">
+          <pre><code class="language-jade">section.woodtilecolor.cocoa</code></pre>
+          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="color" class="actionable background">
             <div class="em-blue">.blackthread</div>
             <div class="em-blue">.brickwalldark</div>
             <div class="em-blue">.brickwall</div>
@@ -74,11 +86,22 @@
             <div class="em-blue">.escheresque</div>
             <div class="em-blue">.straws</div>
             <div class="em-blue">.subtlegrey</div>
-            <div class="em-blue">.woodtilecolor</div>
+            <div class="em-orange">.woodtilecolor</div>
             <div class="em-blue">.treebark</div>
             <div class="em-blue">.washi</div>
             <div class="em-blue">.wood-pattern</div>
             <div class="em-blue">.xv</div>
+          </div>
+          <h4>You can also add color classes to tint</h4>
+          <div data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background" class="actionable color">
+            <div class="em-blue">.white</div>
+            <div class="em-blue">.red</div>
+            <div class="em-blue">.black</div>
+            <div class="em-blue">.grey</div>
+            <div class="em-blue">.blue</div>
+            <div class="em-blue">.midnight</div>
+            <div class="em-blue">.jellybean</div>
+            <div class="em-orange">.cocoa</div>
           </div>
         </div>
       </section>
@@ -107,6 +130,7 @@
             <div class="em-blue">.blur1</div>
             <div class="em-blue">.blur2</div>
             <div class="em-blue">.blur3</div>
+            <div class="em-blue">.blur4</div>
             <div class="em-blue">.opac20</div>
             <div class="em-blue">.opac50</div>
             <div class="em-blue">.opac80</div>
@@ -129,7 +153,7 @@
       </section>
       <section class="wave">
         <div class="box">
-          <h1>Boxed Content</h1>
+          <h1>Highlight Content</h1>
           <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
           <pre><code class="language-jade">p and
 	span.em-green really
@@ -142,15 +166,14 @@
       </section>
       <section class="shippo jellybean">
         <div class="box">
-          <h1><span class="em-blue">.box</span> and <span class="em-blue">section</span> Shades</h1>
+          <h1><span class="em-blue">.box</span> Tints</h1>
           <pre><code class="language-jade">section.shippo.jellybean
-	.content
-		.box
-			h1 Boxed Content Shades</code></pre>
+	.box</code></pre>
           <div data-elem=".box" class="actionable">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.transparent</div>
             <div class="em-blue">.white</div>
+            <div class="em-blue">.red</div>
             <div class="em-blue">.black</div>
             <div class="em-blue">.grey</div>
             <div class="em-blue">.blue</div>
@@ -195,13 +218,22 @@
       </section>
       <section class="jellybean">
         <div class="box">
-          <h1>Text Animations</h1>
+          <h1>Key Activated Animations</h1>
           <h2>hit the<span class="em-orange">r</span>&nbsp;key to activate</h2>
           <h2><span class="em-green">.rotate</span></h2>
           <h1 class="rotate">\[._.]/</h1>
           <h2><span class="em-green">.spin</span></h2>
           <h1 class="spin">\[._.]/</h1>
           <p>you can automatically activate by adding the <span class="em-green">.on</span> class</p>
+        </div>
+      </section>
+      <section class="gplay cocoa">
+        <div class="box">
+          <h1>Slide Activated Animations</h1>
+          <h2>The <span class="animated bounce">theme</span> also includes&nbsp;<a href="https://daneden.github.io/animate.css/" target="off">Animate.css</a></h2>
+          <h1 class="animated pulse">\[._.]/</h1>
+          <h1 class="animated rotateIn">\[._.]/</h1>
+          <h1 class="animated jello">\[._.]/</h1>
         </div>
       </section>
       <section class="cocoa purtywood">
@@ -245,7 +277,7 @@
         </div>
       </section>
       <section>
-        <div ui-fx="blur1" class="fullscreen">
+        <div class="fullscreen blur1">
           <x-gif src="images/slow_clap_citizen_kane.gif" fill n-times="8" stopped></x-gif>
         </div>
         <div class="box">
@@ -255,6 +287,7 @@
           </div>
           <h2>\[._.]/ Adam Eivy</h2>
           <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a href="#1" class="back">&nbsp; restart</a></small>
+          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
         </div>
       </section>
     </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
