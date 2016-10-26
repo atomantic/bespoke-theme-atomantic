@@ -1,0 +1,10 @@
+{
+  "name": "bespoke-theme-atomantic",
+  "version": "2.0.9",
+  "main": "./dist/bespoke-theme-atomantic.js",
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+  }
+}

@@ -1,0 +1,298 @@
+doctype html
+html
+	head
+		title bespoke-theme-atomantic
+		meta(name='description', content='A theme for Bespoke.js')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(charset='utf-8')
+		link(rel='stylesheet', type='text/css', href='build/build.css')
+
+	body
+
+		article
+
+			section
+				x-gif(src="images/perfect_beardscratch.gif" fill)
+				.credit cinema gif thanks to :&nbsp;
+					a(href="http://www.gideondevilliers.com",target="off") gideon de villiers
+				#intro.box.left.notify(title="Swipe or use arrow keys to navigate", data-position="top center", data-noarrow="1")
+					h1 bespoke-theme-atomantic
+					h5#browsersupport.em-red.hide (best in Google Chrome)
+					h2 A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme
+					.mid by
+					.me.center
+					h2 <a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span>
+					h4
+						span buy me a
+						a(href="https://beerpay.io/atomantic/bespoke-theme-atomantic")
+							img.animated.pulse(src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square")
+					audio#audio.notify(controls,loop,title="optionally, press play for soundtrack", data-position="bottom center")
+						source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg")
+						source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg")
+
+			section
+				x-gif(src="images/madness.gif" fill n-times=1)
+				.box.wait-for-gif
+					h1 Content
+					.mid that
+					h2 waits for gif completion
+					pre: code.language-jade.
+						section
+							x-gif(src="images/madness.gif" fill n-times=1)
+							.box.wait-for-gif
+								h1 Content
+								...
+
+			section.carbonfiber
+				.box.notify(title="click to change", data-position="bottom center")
+					h2 CSS Backgrounds
+					pre: code.language-jade.
+						section.carbonfiber
+					.actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
+						.em-blue .blueprint
+						.em-blue .carbon
+						.em-orange .carbonfiber
+						.em-blue .cubes
+						.em-blue .honeycomb
+						.em-blue .paper
+						.em-blue .seigaiha
+						.em-blue .shippo
+						.em-blue .wave
+					h4 some work well with color classes to tint
+					.actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
+						.em-blue .white
+						.em-blue .red
+						.em-blue .black
+						.em-blue .grey
+						.em-blue .blue
+						.em-blue .midnight
+						.em-blue .jellybean
+						.em-blue .cocoa
+
+			section.woodtilecolor.cocoa
+				.box
+					h2 Tiny Image Tile Backgrounds
+					pre: code.language-jade.
+						section.woodtilecolor.cocoa
+					.actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
+						.em-blue .blackthread
+						.em-blue .brickwalldark
+						.em-blue .brickwall
+						.em-blue .diagmonds
+						.em-blue .diamondupholstery
+						.em-blue .gplay
+						.em-blue .gravel
+						.em-blue .oldmath
+						.em-blue .purtywood
+						.em-blue .bullseyes
+						.em-blue .escheresque
+						.em-blue .straws
+						.em-blue .subtlegrey
+						.em-orange .woodtilecolor
+						.em-blue .treebark
+						.em-blue .washi
+						.em-blue .wood-pattern
+						.em-blue .xv
+					h4 You can also add color classes to tint
+					.actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
+						.em-blue .white
+						.em-blue .red
+						.em-blue .black
+						.em-blue .grey
+						.em-blue .blue
+						.em-blue .midnight
+						.em-blue .jellybean
+						.em-orange .cocoa
+
+			section.cubes
+				.box
+					h2 Content Positioning
+					pre: code.language-jade.
+						.box
+							h2 Content Positioning
+					.actionable(data-elem='.box')
+						.em-orange (default)
+						.em-blue .top
+						.em-blue .right
+						.em-blue .bottom
+						.em-blue .left
+
+			section
+				img.fillwb(src="images/spaceman.jpg")
+				.box.bottom
+					h2 Background Image Effects
+					pre: code.language-jade.
+						section
+							img.fillwb(src="images/spaceman.jpg")
+							.box.bottom
+					.actionable(data-elem='img', data-classes='fillwb')
+						.em-orange (default)
+						.em-blue .blur1
+						.em-blue .blur2
+						.em-blue .blur3
+						.em-blue .blur4
+						.em-blue .opac20
+						.em-blue .opac50
+						.em-blue .opac80
+
+			section
+				img.fillw(src="images/spaceman.jpg")
+				.box.top
+					h2 Background Image Size/Position
+					pre: code.language-jade.
+						section
+							img.fillw(src="images/spaceman.jpg")
+					.actionable(data-elem='img')
+						.em-blue (default)
+						.em-blue .fill
+						.em-blue .fillh
+						.em-orange .fillw
+						.em-blue .fillwb
+
+			section.wave
+				.box
+					h1 Highlight Content
+					p and
+						span.em-green really
+						span.em-orange emphatic
+						span.em-red text
+						span.em-yellow colors
+						span.em-blue yo!
+					pre: code.language-jade.
+						p and
+							span.em-green really
+							span.em-orange emphatic
+							span.em-red text
+							span.em-yellow colors
+							span.em-blue yo!
+
+			section.shippo.jellybean
+				.box
+					h1 <span class="em-blue">.box</span> Tints
+					pre: code.language-jade.
+						section.shippo.jellybean
+							.box
+					.actionable(data-elem='.box')
+						.em-orange (default)
+						.em-blue .transparent
+						.em-blue .white
+						.em-blue .red
+						.em-blue .black
+						.em-blue .grey
+						.em-blue .blue
+						.em-blue .midnight
+						.em-blue .jellybean
+						.em-blue .cocoa
+
+			section
+				h1.bullet Paragraph
+				p.bullet bullet content
+				h2 and this is a
+					span.nope bad
+					| &nbsp;great thing
+				pre: code.language-jade.
+					section
+						h1.bullet Paragraph
+						p.bullet bullet content
+						h2 and this is a
+							span.nope bad
+							| &nbsp;great thing
+
+			section.cocoa.diagmonds
+				.box
+					h1 h1 Heading
+					h2 h2 Heading
+					h3 h3 Heading
+					h4 h4 Heading
+					h5 h5 Heading
+
+			section.gplay.jellybean
+				.box
+					h1 Blinking Cursor
+					h2.cursor Engaging Dyson Sphere
+					pre: code.language-jade.
+						h2.cursor Engaging Dyson Sphere
+
+			section.blue
+				.fullscreen
+					x-gif(src="images/perfect_horse.gif" fill n-times=2)
+				.box
+					h1 Text Styles
+					p this is a p tag
+					p.code and a p.code tag is monospace
+					.mid but
+					p ^ is .mid
+
+			section.jellybean
+				.box
+					h1 Key Activated Animations
+					h2 hit the
+						span.em-orange r
+						| &nbsp;key to activate
+					h2: span.em-green .rotate
+					h1.rotate \[._.]/
+					h2: span.em-green .spin
+					h1.spin \[._.]/
+
+					p you can automatically activate by adding the <span class="em-green">.on</span> class
+
+			section.gplay.cocoa
+				.box
+					h1 Slide Activated Animations
+					h2 The <span class="animated bounce">theme</span> also includes&nbsp;
+						a(href="https://daneden.github.io/animate.css/" target="off") Animate.css
+					h1.animated.pulse \[._.]/
+					h1.animated.rotateIn \[._.]/
+					h1.animated.jello \[._.]/
+					pre: code.language-jade.
+						h1.animated.pulse \[._.]/
+						h1.animated.rotateIn \[._.]/
+						h1.animated.jello \[._.]/
+
+			section.cocoa.purtywood
+				.box
+					h1 Unordered Lists
+					ul
+						li Section 1
+							ul
+								li Awesome things
+								li Even more awesome
+						li Section 2
+							ul
+								li Continue Awesome
+								li Advanced
+						li Keeping it real
+
+			section.cocoa.woodtilecolor
+				.box
+					h1 Ordered Lists
+					ol
+						li Section 1
+							ol
+								li Awesome things
+								li Even more awesome
+						li Section 2
+							ol
+								li Continue Awesome
+								li Advanced
+						li Keeping it real
+
+			section
+				.fullscreen.blur1
+					x-gif(src="images/slow_clap_citizen_kane.gif" fill n-times=8 stopped)
+				.box
+					.mid Thanks!
+					.line
+						.me.center
+					h2 \[._.]/ Adam Eivy
+					h3: a(href='https://twitter.com/antic') &nbsp; @antic
+					small: a.back(href='#1') &nbsp; restart
+					h4
+						span buy me a
+						a(href="https://beerpay.io/atomantic/bespoke-theme-atomantic")
+							img(src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square")
+
+		a(href='https://github.com/atomantic/bespoke-theme-atomantic')
+			img(style='position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;', src='images/right-grey@2x.png' alt='Fork me on GitHub')
+
+		script(src='build/build.js')
