@@ -1,5 +1,5 @@
 /*!
- * bespoke-theme-atomantic v2.1.3
+ * bespoke-theme-atomantic v2.1.4
  *
  * Copyright 2016, Adam Eivy
  * This content is released under the MIT license
