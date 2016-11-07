@@ -1,3 +1,6 @@
+# 2.1.3
+  - update npm dependencies to latest
+
 # 2.1.2
   - reduce size of demo image
 
