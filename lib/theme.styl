@@ -56,16 +56,16 @@ ul,ol
   font-weight: 400
   &.noprefix
     list-style: none
+    ol,ul
+      list-style: none
+      li
+        margin-left:0
+        &::before
+          content:none
     li
       margin-left:0
       &::before
         content:none
-li
-  margin-bottom: 12px
-  text-align: left
-  width: 100%
-  margin-left: 0.5em
-ol,ul
   ul
     margin-left: 30px
     li
@@ -77,6 +77,11 @@ ol,ul
     li
       margin-bottom: 0
       line-height: 1.4em
+li
+  margin-bottom: 12px
+  text-align: left
+  width: 100%
+  margin-left: 0.5em
 blockquote
   text-align:left
 

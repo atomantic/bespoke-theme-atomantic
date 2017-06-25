@@ -1,3 +1,6 @@
+# 2.1.6
+  - nested noprefix lists also show no prefix
+
 # 2.1.3
   - update npm dependencies to latest
 
