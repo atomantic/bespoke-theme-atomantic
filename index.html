@@ -18,8 +18,8 @@
           <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
           <div class="mid">by</div>
           <div class="me center"></div>
-          <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span> </h2>
-          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img class="animated pulse" src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
+          <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span></h2>
+          <h4><span>buy me a</span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img class="animated pulse" src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
           <audio class="notify" id="audio" controls loop title="optionally, press play for soundtrack" data-position="bottom center">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
@@ -119,11 +119,11 @@
           </div>
         </div>
       </section>
-      <section><img class="fillwb" src="images/spaceman.jpeg">
+      <section><img class="fillwb" src="images/spaceman.jpg">
         <div class="box bottom">
           <h2>Background Image Effects</h2>
           <pre><code class="language-jade">section
-	img.fillwb(src="images/spaceman.jpeg")
+	img.fillwb(src="images/spaceman.jpg")
 	.box.bottom</code></pre>
           <div class="actionable" data-elem="img" data-classes="fillwb">
             <div class="em-orange">(default)</div>
@@ -137,28 +137,28 @@
           </div>
         </div>
       </section>
-      <section><img class="fillwb" src="images/spaceman.jpeg">
-        <div class="box bottom">
+      <section><img class="fillw" src="images/spaceman.jpg">
+        <div class="box top">
           <h2>Background Image Size/Position</h2>
           <pre><code class="language-jade">section
-	img.fillwb(src="images/spaceman.jpeg")</code></pre>
+	img.fillw(src="images/spaceman.jpg")</code></pre>
           <div class="actionable" data-elem="img">
             <div class="em-blue">(default)</div>
             <div class="em-blue">.fill</div>
             <div class="em-blue">.fillh</div>
-            <div class="em-blue">.fillw</div>
-            <div class="em-orange">.fillwb</div>
+            <div class="em-orange">.fillw</div>
+            <div class="em-blue">.fillwb</div>
           </div>
         </div>
       </section>
       <section class="wave">
         <div class="box">
           <h1>Highlight Content</h1>
-          <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text </span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
+          <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text</span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
           <pre><code class="language-jade">p and
 	span.em-green really
 	span.em-orange emphatic
-	span.em-red text 
+	span.em-red text
 	span.em-yellow colors
 	span.em-blue yo!
 </code></pre>
@@ -186,11 +186,11 @@
       <section>
         <h1 class="bullet">Paragraph</h1>
         <p class="bullet">bullet content</p>
-        <h2>and this is a <span class="nope">bad</span>&nbsp;great thing</h2>
+        <h2>and this is a<span class="nope">bad</span>&nbsp;great thing</h2>
         <pre><code class="language-jade">section
 	h1.bullet Paragraph
 	p.bullet bullet content
-	h2 and this is a 
+	h2 and this is a
 		span.nope bad
 		| &nbsp;great thing
 </code></pre>
@@ -204,8 +204,16 @@
           <h5>h5 Heading</h5>
         </div>
       </section>
+      <section class="gplay jellybean">
+        <div class="box">
+          <h1>Blinking Cursor</h1>
+          <h2 class="cursor">Engaging Dyson Sphere</h2>
+          <pre><code class="language-jade">h2.cursor Engaging Dyson Sphere
+</code></pre>
+        </div>
+      </section>
       <section class="blue">
-        <div class="fullscreen"> 
+        <div class="fullscreen">
           <x-gif src="images/perfect_horse.gif" fill n-times="2"></x-gif>
         </div>
         <div class="box">
@@ -234,6 +242,10 @@
           <h1 class="animated pulse">\[._.]/</h1>
           <h1 class="animated rotateIn">\[._.]/</h1>
           <h1 class="animated jello">\[._.]/</h1>
+          <pre><code class="language-jade">h1.animated.pulse \[._.]/
+h1.animated.rotateIn \[._.]/
+h1.animated.jello \[._.]/
+</code></pre>
         </div>
       </section>
       <section class="cocoa purtywood">
@@ -287,10 +299,10 @@
           </div>
           <h2>\[._.]/ Adam Eivy</h2>
           <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a class="back" href="#1">&nbsp; restart</a></small>
-          <h4><span>buy me a </span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
+          <h4><span>buy me a</span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
         </div>
       </section>
-    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
+    </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
     <script src="build/build.js"></script>
   </body>
 </html>
