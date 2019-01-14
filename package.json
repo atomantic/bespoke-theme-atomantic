@@ -67,5 +67,7 @@
   "keywords": [
     "bespoke-plugin",
     "bespoke-theme"
-  ]
+  ],
+  "dependencies": {
+  }
 }

@@ -74,7 +74,7 @@ gulp.task('stylus', gulp.series('clean:stylus', function() {
     .pipe(gulp.dest('lib/tmp'));
 }));
 
-gulp.task('browserify:lib', gulp.series('clean:browserify', 'stylus'), function() {
+gulp.task('browserify:lib', gulp.series('stylus', function() {
 
   var b = browserify({  transform: ['brfs'], standalone: 'bespoke.themes.atomantic'});
   b.add('./lib/bespoke-theme-atomantic.js');
@@ -99,9 +99,9 @@ gulp.task('browserify:lib', gulp.series('clean:browserify', 'stylus'), function(
       '<%= license %> License */\n'
     ].join(''))(pkg)))
     .pipe(gulp.dest('./dist'));
-});
+}));
 
-gulp.task('browserify:demo', function() {
+gulp.task('browserify:demo', gulp.series('stylus', function() {
     var b = browserify({ transform: ['brfs']});
     b.add('./demo/src/scripts/main.js');
 
@@ -109,7 +109,7 @@ gulp.task('browserify:demo', function() {
       .pipe(source('build.js'))
       .pipe(gulp.dest('demo/dist/build'))
       .pipe(connect.reload());
-});
+}));
 
 gulp.task('browserify', gulp.series('browserify:lib', 'browserify:demo'));
 
@@ -165,7 +165,7 @@ gulp.task('deploy', gulp.series('compile:demo', function(done) {
 }));
 
 
-gulp.task('compile:lib', gulp.series('stylus', 'browserify:lib'));
+gulp.task('compile:lib', gulp.series('stylus', 'browserify'));
 gulp.task('compile', gulp.series('compile:lib', 'compile:demo'));
 
 gulp.task('connect', gulp.series('compile', function(done) {

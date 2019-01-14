@@ -1,5 +1,6 @@
 var bespoke = require('bespoke'),
   atomantic = require('../../../lib/bespoke-theme-atomantic.js'),
+  wc = require('@webcomponents/webcomponentsjs/webcomponents-loader.js'),
   hash = require('bespoke-hash'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
