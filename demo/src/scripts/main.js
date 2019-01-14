@@ -14,7 +14,7 @@ var bespoke = require('bespoke'),
 window.$ = window.jQuery = require("jquery");
 require('notifyjs-browser')($);
 require('prismjs');
-require('prismjs/components/prism-jade.min.js');
+require('prismjs/components/prism-pug.min.js');
 // require('prism/components/prism-yaml.min.js');
 // require('prism/components/prism-bash.js');
 // require('prism/components/prism-json.js');
