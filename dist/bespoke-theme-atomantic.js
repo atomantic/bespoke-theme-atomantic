@@ -79,8 +79,12 @@ if ('registerElement' in document
   document.head.appendChild(tag);
   var bs = document.getElementById('browsersupport');
   if(bs){
-    bs.className = bs.className.replace('hide','')
+    bs.className = bs.className.replace('hide','');
   }
+  [].slice.call(document.querySelectorAll('.wait-for-gif'), 0).map(function(el){
+    el.classList.remove('wait-for-gif');
+    el.classList.add('wait-for-gif-unsupported');
+  });
 }
 
 var brightness = 0;

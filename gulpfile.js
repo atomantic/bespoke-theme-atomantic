@@ -147,7 +147,7 @@ gulp.task('images', gulp.series('patterns', function() {
   return gulp.src('demo/src/images/**/*')
     .pipe(gulp.dest('demo/dist/images'))
     .pipe(connect.reload());
-}));d
+}));
 
 gulp.task('compile:demo', gulp.series('pug', 'images', 'democss', 'xgif', 'browserify:demo'));
 
