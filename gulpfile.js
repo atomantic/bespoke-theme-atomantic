@@ -37,13 +37,6 @@ gulp.task('clean:browserify', function() {
   }).pipe(clean());
 });
 
-gulp.task('clean:stylus', function() {
-  return gulp.src(['lib/tmp'], { 
-    allowEmpty: true,
-    read: false
-  }).pipe(clean());
-});
-
 gulp.task('clean:pug', function() {
   return gulp.src(['demo/dist/index.html'], { 
     allowEmpty: true,
@@ -58,11 +51,11 @@ gulp.task('clean:democss', function() {
   }).pipe(clean());
 });
 
-gulp.task('clean', gulp.series('clean:browserify', 'clean:stylus', 'clean:pug'));
+gulp.task('clean', gulp.series('clean:browserify', 'clean:pug'));
 
 
 
-gulp.task('stylus', gulp.series('clean:stylus', function() {
+gulp.task('stylus', gulp.series(function() {
   return gulp.src('lib/theme.styl')
     .pipe(isDemo ? plumber() : through())
     .pipe(stylus({
@@ -154,9 +147,7 @@ gulp.task('images', gulp.series('patterns', function() {
   return gulp.src('demo/src/images/**/*')
     .pipe(gulp.dest('demo/dist/images'))
     .pipe(connect.reload());
-}));
-
-
+}));d
 
 gulp.task('compile:demo', gulp.series('pug', 'images', 'democss', 'xgif', 'browserify:demo'));
 

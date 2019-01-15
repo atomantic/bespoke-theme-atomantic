@@ -68,6 +68,5 @@
     "bespoke-plugin",
     "bespoke-theme"
   ],
-  "dependencies": {
-  }
+  "dependencies": {}
 }
