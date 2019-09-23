@@ -1,3 +1,11 @@
+# 2.2.2
+  - update deps
+
+# 2.2.0
+  - lots of new css
+  - multibox
+  - more colors
+  
 # 2.1.6
   - nested noprefix lists also show no prefix
 

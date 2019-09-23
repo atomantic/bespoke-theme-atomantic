@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 
 gulp.task('watch', function(done) {
   gulp.watch('lib/css/*', gulp.series('stylus'));
-  gulp.watch('dist/theme.css', gulp.series('compile:lib', 'browserify:demo'));
+  gulp.watch('dist/theme.css', gulp.series('browserify:demo'));
   gulp.watch('lib/*', gulp.series('compile:lib', 'browserify:demo'));
   gulp.watch('demo/src/*.pug', gulp.series('pug'));
   gulp.watch('demo/src/**/*.styl', gulp.series('democss'));
