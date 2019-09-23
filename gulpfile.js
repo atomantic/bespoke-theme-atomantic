@@ -152,6 +152,7 @@ gulp.task('images', gulp.series('patterns', function() {
 gulp.task('compile:demo', gulp.series('pug', 'images', 'democss', 'xgif', 'browserify:demo'));
 
 gulp.task('deploy', gulp.series('compile:demo', function(done) {
+  console.log('publishing')
   ghpages.publish(path.join(__dirname, 'demo/dist'), { logger: gutil.log }, done);
 }));
 
