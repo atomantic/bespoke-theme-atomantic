@@ -5,7 +5,7 @@
     <meta name="description" content="A theme for Bespoke.js">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="build/build.css">
+    <link rel="stylesheet" type="text/css" href="build.css">
   </head>
   <body>
     <article>
@@ -13,14 +13,13 @@
         <x-gif src="images/perfect_beardscratch.gif" fill></x-gif>
         <div class="credit">cinema gif thanks to :&nbsp;<a href="http://www.gideondevilliers.com" target="off">gideon de villiers</a></div>
         <div class="box left notify" id="intro" title="Swipe or use arrow keys to navigate" data-position="top center" data-noarrow="1">
-          <h1>bespoke-theme-atomantic</h1>
+          <h2>bespoke-theme-atomantic</h2>
           <h5 class="em-red hide" id="browsersupport">(best in Google Chrome)</h5>
           <h2>A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme</h2>
           <div class="mid">by</div>
           <div class="me center"></div>
-          <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span></h2>
-          <h4><span>buy me a</span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img class="animated pulse" src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
-          <audio class="notify" id="audio" controls loop title="optionally, press play for soundtrack" data-position="bottom center">
+          <h2><a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rocking accent">\[._.]/</span></h2>
+          <audio class="notify" id="audio" controls loop title="optionally, press play for soundtrack&lt;br&gt;&lt;a target='off' href='https://archive.org/details/DaftPunkTronLegacyEncomPartIi'&gt;(Encom II, Daft Punk: CC0 1.0 Universal)&lt;/a&gt;" data-position="bottom center">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg">
             <source src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg">
           </audio>
@@ -33,10 +32,10 @@
           <div class="mid">that</div>
           <h2>waits for gif completion</h2>
           <pre><code class="language-jade">section
-	x-gif(src="images/madness.gif" fill n-times=1)
-	.box.wait-for-gif
-		h1 Content
-		...
+  x-gif(src="images/madness.gif" fill n-times=1)
+  .box.wait-for-gif
+    h1 Content
+    ...
 </code></pre>
         </div>
       </section>
@@ -57,14 +56,19 @@
           </div>
           <h4>some work well with color classes to tint</h4>
           <div class="actionable color" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background">
-            <div class="em-blue">.white</div>
-            <div class="em-blue">.red</div>
             <div class="em-blue">.black</div>
-            <div class="em-blue">.grey</div>
             <div class="em-blue">.blue</div>
-            <div class="em-blue">.midnight</div>
-            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.lightblue</div>
             <div class="em-blue">.cocoa</div>
+            <div class="em-blue">.green</div>
+            <div class="em-blue">.grey</div>
+            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.midnight</div>
+            <div class="em-blue">.orange</div>
+            <div class="em-blue">.red</div>
+            <div class="em-blue">.transparent</div>
+            <div class="em-blue">.white</div>
+            <div class="em-blue">.yellow</div>
           </div>
         </div>
       </section>
@@ -94,14 +98,19 @@
           </div>
           <h4>You can also add color classes to tint</h4>
           <div class="actionable color" data-elem="section" data-classes="bespoke-slide bespoke-active" data-with="background">
-            <div class="em-blue">.white</div>
-            <div class="em-blue">.red</div>
             <div class="em-blue">.black</div>
-            <div class="em-blue">.grey</div>
             <div class="em-blue">.blue</div>
-            <div class="em-blue">.midnight</div>
-            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.lightblue</div>
             <div class="em-orange">.cocoa</div>
+            <div class="em-blue">.green</div>
+            <div class="em-blue">.grey</div>
+            <div class="em-blue">.jellybean</div>
+            <div class="em-blue">.midnight</div>
+            <div class="em-blue">.orange</div>
+            <div class="em-blue">.red</div>
+            <div class="em-blue">.transparent</div>
+            <div class="em-blue">.white</div>
+            <div class="em-blue">.yellow</div>
           </div>
         </div>
       </section>
@@ -109,13 +118,72 @@
         <div class="box">
           <h2>Content Positioning</h2>
           <pre><code class="language-jade">.box
-	h2 Content Positioning</code></pre>
+  h2 Content Positioning</code></pre>
           <div class="actionable" data-elem=".box">
             <div class="em-orange">(default)</div>
+            <div class="em-blue">.top.left</div>
             <div class="em-blue">.top</div>
+            <div class="em-blue">.top.right</div><br>
             <div class="em-blue">.right</div>
+            <div class="em-blue">.bottom.right</div>
             <div class="em-blue">.bottom</div>
+            <div class="em-blue">.bottom.left</div>
             <div class="em-blue">.left</div>
+          </div>
+        </div>
+      </section>
+      <section class="cubes">
+        <div class="multibox">
+          <div class="box top left">
+            <h2>Top Left</h2>
+            <pre><code class="language-jade">.multibox
+  .box.top.left
+    h2 Top Left</code></pre>
+          </div>
+          <div class="box top right">
+            <h2>Top Right</h2>
+            <pre><code class="language-jade">.multibox
+  .box.top.right
+    h2 Top Right</code></pre>
+          </div>
+          <div class="box bottom left">
+            <h2>Bottom Left</h2>
+            <pre><code class="language-jade">.multibox
+  .box.bottom.left
+    h2 Bottom Left</code></pre>
+          </div>
+          <div class="box bottom right">
+            <h2>Bottom Right</h2>
+            <pre><code class="language-jade">.multibox
+  .box.bottom.right
+    h2 Bottom Right
+</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="cubes">
+        <div class="multibox">
+          <div class="title">Title Bar</div>
+          <div class="box left">
+            <h2>Left</h2>
+            <pre><code class="language-jade">section.cubes
+  .multibox
+    .title Title Bar
+    .box.left
+      h2 Left
+    .box.right
+      h2 Right</code></pre>
+          </div>
+          <div class="box right">
+            <h2>Right</h2>
+            <pre><code class="language-jade">section.cubes
+  .multibox
+    .title Title Bar
+    .box.left
+      h2 Left
+    .box.right
+      h2 Right
+</code></pre>
           </div>
         </div>
       </section>
@@ -123,8 +191,8 @@
         <div class="box bottom">
           <h2>Background Image Effects</h2>
           <pre><code class="language-jade">section
-	img.fillwb(src="images/spaceman.jpg")
-	.box.bottom</code></pre>
+  img.fillwb(src="images/spaceman.jpg")
+  .box.bottom</code></pre>
           <div class="actionable" data-elem="img" data-classes="fillwb">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.blur1</div>
@@ -141,7 +209,7 @@
         <div class="box top">
           <h2>Background Image Size/Position</h2>
           <pre><code class="language-jade">section
-	img.fillw(src="images/spaceman.jpg")</code></pre>
+  img.fillw(src="images/spaceman.jpg")</code></pre>
           <div class="actionable" data-elem="img">
             <div class="em-blue">(default)</div>
             <div class="em-blue">.fill</div>
@@ -154,13 +222,15 @@
       <section class="wave">
         <div class="box">
           <h1>Highlight Content</h1>
-          <p>and<span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text</span><span class="em-yellow">colors</span><span class="em-blue">yo!</span></p>
-          <pre><code class="language-jade">p and
-	span.em-green really
-	span.em-orange emphatic
-	span.em-red text
-	span.em-yellow colors
-	span.em-blue yo!
+          <p><span class="em-green">really</span><span class="em-orange">emphatic</span><span class="em-red">text</span><span class="em-yellow">colors</span><span class="em-blue">yo!</span><span class="em-grey">grey!</span><span class="em-white">white!</span></p>
+          <pre><code class="language-jade">p
+  span.em-green really
+  span.em-orange emphatic
+  span.em-red text
+  span.em-yellow colors
+  span.em-blue yo!
+  span.em-grey grey!
+  span.em-white white!
 </code></pre>
         </div>
       </section>
@@ -168,7 +238,7 @@
         <div class="box">
           <h1><span class="em-blue">.box</span> Tints</h1>
           <pre><code class="language-jade">section.shippo.jellybean
-	.box</code></pre>
+  .box</code></pre>
           <div class="actionable" data-elem=".box">
             <div class="em-orange">(default)</div>
             <div class="em-blue">.transparent</div>
@@ -188,11 +258,11 @@
         <p class="bullet">bullet content</p>
         <h2>and this is a<span class="nope">bad</span>&nbsp;great thing</h2>
         <pre><code class="language-jade">section
-	h1.bullet Paragraph
-	p.bullet bullet content
-	h2 and this is a
-		span.nope bad
-		| &nbsp;great thing
+  h1.bullet Paragraph
+  p.bullet bullet content
+  h2 and this is a
+    span.nope bad
+    | &nbsp;great thing
 </code></pre>
       </section>
       <section class="cocoa diagmonds">
@@ -289,20 +359,39 @@ h1.animated.jello \[._.]/
         </div>
       </section>
       <section>
+        <div class="fullscreen"><img class="fill" src="images/nasa-Q1p7bh3SHj8-unsplash.jpg">
+          <div class="credit">credit:&nbsp;<a href="https://unsplash.com/@nasa">NASA</a></div>
+        </div>
+        <div class="box">
+          <h1>Background Image Credits</h1>
+          <pre><code class="language-jade">section
+  .fullscreen
+    img.fill(src="images/nasa-Q1p7bh3SHj8-unsplash.jpg")
+    .credit credit:&nbsp;
+      a(href="https://unsplash.com/@nasa",target="off") NASA
+  .box
+    h1 Background Image Credits
+
+</code></pre>
+        </div>
+      </section>
+      <section>
         <div class="fullscreen blur1">
           <x-gif src="images/slow_clap_citizen_kane.gif" fill n-times="8" stopped></x-gif>
         </div>
-        <div class="box">
-          <div class="mid">Thanks!</div>
+        <div class="box left">
+          <h1 class="mid">Cheers!</h1>
           <div class="line">
             <div class="me center"></div>
           </div>
-          <h2>\[._.]/ Adam Eivy</h2>
-          <h3><a href="https://twitter.com/antic">&nbsp; @antic</a></h3><small><a class="back" href="#1">&nbsp; restart</a></small>
-          <h4><span>buy me a</span><a href="https://beerpay.io/atomantic/bespoke-theme-atomantic"><img src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square"></a></h4>
+          <h2><span class="notranslate emoticon rocking">\[._.]/</span><span class="notranslate">&nbsp; <a href="https://adameivy.com" target="off">Adam Eivy</a></span></h2>
+          <blockquote>
+            <h3><a href="https://twitter.com/antic"><i class="fa fa-twitter-square"></i>&nbsp;@antic</a></h3>
+            <h3><a href="https://github.com/atomantic"><i class="fa fa-github-square"></i>&nbsp;/atomantic</a></h3>
+          </blockquote><small><a class="back" href="#1">&nbsp; restart</a></small>
         </div>
       </section>
     </article><a href="https://github.com/atomantic/bespoke-theme-atomantic"><img style="position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;" src="images/right-grey@2x.png" alt="Fork me on GitHub"></a>
-    <script src="build/build.js"></script>
+    <script src="build.js"></script>
   </body>
 </html>
