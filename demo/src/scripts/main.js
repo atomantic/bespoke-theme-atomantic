@@ -11,8 +11,6 @@ var bespoke = require('bespoke'),
 // Prism syntax highlighting
 // This is actually loaded from "bower_components" thanks to
 // debowerify: https://github.com/eugeneware/debowerify
-window.$ = window.jQuery = require("jquery");
-require('notifyjs-browser')($);
 require('prismjs');
 require('prismjs/components/prism-pug.min.js');
 // require('prism/components/prism-yaml.min.js');
@@ -33,32 +31,7 @@ bespoke.from('article', [
   progress()
 ]);
 
-$.notify.addStyle("instructions", {
-  html: "<div>" +
-    "<div class='image' data-notify-html='image'/>" +
-    "<div class='text-wrapper'>" +
-    "<div class='title' data-notify-html='title'/>" +
-    "<div class='text' data-notify-html='text'/>" +
-    "</div>" +
-    "<div class='clearfix'></div>" +
-    "</div>"
-});
-
-setTimeout(function() {
-    $('.notify').each(function(){
-      var $t = $(this);
-      $t.notify({
-        text: $t.attr('title')
-      },{
-        style: 'instructions',
-        className: $t.data('color') || 'base',
-        autoHide: false,
-        arrowShow: !$t.data('noarrow'),
-        position: $t.data('position') || 'right middle'
-      });
-    });
-}, 2000);
-
+// actionable elements are boxes with clickable content (e.g. the background color/image demo)
 $('.actionable').children().on('click', function(){
   var classList = [];
   var t = $(this),
@@ -69,19 +42,19 @@ $('.actionable').children().on('click', function(){
       p = s.find('pre'),
       $e = e === 'section' ? s : s.find(e),
       r = new RegExp(e+'[^\(\n]*'),
-      c = t.text().replace('.','');
+      c = t.text().replace(/\./g,' ');
   if(w){
     // combined with another actionable
     var $w = s.find('.'+w).find('.em-orange');
     if($w.length){
-      classList.push($w.text().replace('.',''));
+      classList.push($w.text().replace(/\./g,' '));
     }
   }
   // first add the element if it's a class
   var elementIsClass = e.indexOf('.') !== -1;
   if(elementIsClass){
     // element is a class
-    classList.push(e.replace('.',''));
+    classList.push(e.replace(/\./g,' '));
   }
   // then add the new class from the button
   if(c === '(default)'){

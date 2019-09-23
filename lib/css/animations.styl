@@ -1,0 +1,71 @@
+
+@keyframes rocking
+  from
+    transform: rotate(-5deg)
+  80%
+    transform: rotate(15deg)
+  to
+    transform: rotate(0deg)
+
+.rocking
+  display:inline-block
+  transform:rotate(30deg)
+  animation:rocking 3s ease-in-out infinite alternate
+
+/*
+  add span.rotate then press 'r'
+  press 'r' again to reset the animation
+  press again to replay
+*/
+
+.rotate, .spin
+  display: inline-block
+  transform: none
+.rotate.on
+  transition-delay: 0.5s
+  transition-duration: 1s
+  transform: rotate(15deg)
+.spin.on
+  transition-delay: 1.5s
+  transition-duration: 1s
+  transform: rotate(360deg)
+
+
+span.animate
+  display: inline-block
+
+/* allow manual animation delays */
+.animate
+  &.delay1
+    animation-delay: 1s
+  &.delay2
+    animation-delay: 2s
+  &.delay3
+    animation-delay: 3s
+  &.delay4
+    animation-delay: 4s
+  &.delay5
+    animation-delay: 5s
+  &.delay6
+    animation-delay: 6s
+  &.delay7
+    animation-delay: 7s
+  &.delay8
+    animation-delay: 8s
+
+@keyframes cursor
+  0%
+    opacity: 0
+  40%
+    opacity: 0
+  50%
+    opacity: 1
+  90%
+    opacity: 1
+  100%
+    opacity: 0
+/* blinking cursor */
+.cursor:after
+  content:"_"
+  opacity: 0
+  animation: cursor 1s infinite

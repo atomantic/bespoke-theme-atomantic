@@ -1,13 +1,12 @@
 {
   "name": "bespoke-theme-atomantic",
-  "version": "2.1.8",
+  "version": "2.2.0",
   "description": "A theme for Bespoke.js using x-gif",
   "homepage": "https://github.com/atomantic/bespoke-theme-atomantic",
   "bugs": "https://github.com/atomantic/bespoke-theme-atomantic/issues",
   "author": {
     "name": "Adam Eivy",
-    "url": "https://github.com/atomantic",
-    "email": "atomantic@gmail.com"
+    "url": "https://github.com/atomantic"
   },
   "main": "./dist/bespoke-theme-atomantic.min.js",
   "repository": {

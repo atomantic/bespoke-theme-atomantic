@@ -1,0 +1,57 @@
+/*
+ * Emphasis
+ */
+.em
+  padding: 5px 10px
+  margin: 5px 2px
+  border: 1px solid transparent
+  border-radius: 4px
+  text-shadow: none
+  font-weight: 300
+  display: inline-block
+  line-height: 1.2em
+  font-family: monospace
+  font-style: normal
+.em-blue
+  @extend .em
+  color: #3a87ad
+  background-color: #d9edf7
+  border-color: #bce8f1
+  a
+    color:#369
+.em-bold
+  @extend .em
+  font-weight: bold
+.em-orange
+  @extend .em
+  color: #f85
+  background-color: #fcf8e3
+  border-color: #fbeed5
+.em-green
+  @extend .em
+  color: #468847
+  background-color: #dff0d8
+  border-color: #d6e9c6
+.em-grey
+  @extend .em
+  color: #333
+  background-color: #ccc
+  border-color: #666
+.em-red
+  @extend .em
+  color: #b94a48
+  background-color: #f2dede
+  border-color: #eed3d7
+.em-white
+  @extend .em
+  color: #666
+  background-color: #fff
+  border-color: #ccc
+.em-yellow
+  @extend .em
+  color: #8a6d3b
+  background-color: #fcf8e3
+  border-color: #faebcc
+p.code
+  .em-red, .em-yellow,.em-green,.em-blue
+      margin: 5px 0

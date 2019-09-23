@@ -22,6 +22,8 @@ var gulp = require('gulp'),
   isDemo = process.argv.indexOf('demo') > 0;
 
 gulp.task('watch', function(done) {
+  gulp.watch('lib/css/*', gulp.series('stylus'));
+  gulp.watch('dist/theme.css', gulp.series('compile:lib', 'browserify:demo'));
   gulp.watch('lib/*', gulp.series('compile:lib', 'browserify:demo'));
   gulp.watch('demo/src/*.pug', gulp.series('pug'));
   gulp.watch('demo/src/**/*.styl', gulp.series('democss'));
@@ -31,21 +33,21 @@ gulp.task('watch', function(done) {
 });
 
 gulp.task('clean:browserify', function() {
-  return gulp.src(['dist'], { 
+  return gulp.src(['dist'], {
     allowEmpty: true,
     read: false
   }).pipe(clean());
 });
 
 gulp.task('clean:pug', function() {
-  return gulp.src(['demo/dist/index.html'], { 
+  return gulp.src(['demo/dist/index.html'], {
     allowEmpty: true,
     read: false
   }).pipe(clean());
 });
 
 gulp.task('clean:democss', function() {
-  return gulp.src(['demo/dist/build/build.css'], { 
+  return gulp.src(['demo/dist/build.css'], {
     allowEmpty: true,
     read: false
   }).pipe(clean());
@@ -53,18 +55,16 @@ gulp.task('clean:democss', function() {
 
 gulp.task('clean', gulp.series('clean:browserify', 'clean:pug'));
 
-
-
 gulp.task('stylus', gulp.series(function() {
-  return gulp.src('lib/theme.styl')
+  return gulp.src('lib/css/theme.styl')
     .pipe(isDemo ? plumber() : through())
     .pipe(stylus({
       'include css': true,
-      'paths': ['./node_modules']
+      'paths': ['./','./lib/css','./node_modules']
     }))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(csso())
-    .pipe(gulp.dest('lib/tmp'));
+    .pipe(gulp.dest('dist'));
 }));
 
 gulp.task('browserify:lib', gulp.series('stylus', function() {
@@ -100,7 +100,7 @@ gulp.task('browserify:demo', gulp.series('stylus', function() {
 
     return b.bundle().pipe(isDemo ? plumber() : through())
       .pipe(source('build.js'))
-      .pipe(gulp.dest('demo/dist/build'))
+      .pipe(gulp.dest('demo/dist'))
       .pipe(connect.reload());
 }));
 
@@ -126,7 +126,7 @@ gulp.task('democss', gulp.series('clean:democss', function() {
     .pipe(autoprefixer('last 2 versions', { map: false }))
     .pipe(csso())
     .pipe(rename('build.css'))
-    .pipe(gulp.dest('demo/dist/build'))
+    .pipe(gulp.dest('demo/dist'))
     .pipe(connect.reload());
 }));
 

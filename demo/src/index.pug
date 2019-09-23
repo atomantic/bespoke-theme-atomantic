@@ -1,298 +1,387 @@
 doctype html
 html
-	head
-		title bespoke-theme-atomantic
-		meta(name='description', content='A theme for Bespoke.js')
-		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-		meta(charset='utf-8')
-		link(rel='stylesheet', type='text/css', href='build/build.css')
+  head
+    title bespoke-theme-atomantic
+    meta(name='description', content='A theme for Bespoke.js')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='build.css')
 
-	body
+  body
 
-		article
+    article
 
-			section
-				x-gif(src="images/perfect_beardscratch.gif" fill)
-				.credit cinema gif thanks to :&nbsp;
-					a(href="http://www.gideondevilliers.com",target="off") gideon de villiers
-				#intro.box.left.notify(title="Swipe or use arrow keys to navigate", data-position="top center", data-noarrow="1")
-					h1 bespoke-theme-atomantic
-					h5#browsersupport.em-red.hide (best in Google Chrome)
-					h2 A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme
-					.mid by
-					.me.center
-					h2 <a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rotate on">\[._.]/</span>
-					h4
-						span buy me a
-						a(href="https://beerpay.io/atomantic/bespoke-theme-atomantic")
-							img.animated.pulse(src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square")
-					audio#audio.notify(controls,loop,title="optionally, press play for soundtrack", data-position="bottom center")
-						source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg")
-						source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg")
+      section
+        x-gif(src="images/perfect_beardscratch.gif" fill)
+        .credit cinema gif thanks to :&nbsp;
+          a(href="http://www.gideondevilliers.com",target="off") gideon de villiers
+        #intro.box.left.notify(title="Swipe or use arrow keys to navigate", data-position="top center", data-noarrow="1")
+          h2 bespoke-theme-atomantic
+          h5#browsersupport.em-red.hide (best in Google Chrome)
+          h2 A <a href="http://markdalgleish.com/projects/bespoke.js/" target="off">Bespoke.js</a> theme
+          .mid by
+          .me.center
+          h2 <a href="http://adameivy.com" target="off">Adam Eivy</a> <span class="rocking accent">\[._.]/</span>
+          audio#audio.notify(controls,loop,title="optionally, press play for soundtrack<br><a target='off' href='https://archive.org/details/DaftPunkTronLegacyEncomPartIi'>(Encom II, Daft Punk: CC0 1.0 Universal)</a>", data-position="bottom center")
+            source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.ogg" type="audio/ogg")
+            source(src="https://archive.org/download/DaftPunkTronLegacyEncomPartIi/DaftPunkTronLegacyEncomPartIi.mp3" type="audio/mpeg")
 
-			section
-				x-gif(src="images/madness.gif" fill n-times=1)
-				.box.wait-for-gif
-					h1 Content
-					.mid that
-					h2 waits for gif completion
-					pre: code.language-jade.
-						section
-							x-gif(src="images/madness.gif" fill n-times=1)
-							.box.wait-for-gif
-								h1 Content
-								...
+      section
+        x-gif(src="images/madness.gif" fill n-times=1)
+        .box.wait-for-gif
+          h1 Content
+          .mid that
+          h2 waits for gif completion
+          pre: code.language-jade.
+            section
+              x-gif(src="images/madness.gif" fill n-times=1)
+              .box.wait-for-gif
+                h1 Content
+                ...
 
-			section.carbonfiber
-				.box.notify(title="click to change", data-position="bottom center")
-					h2 CSS Backgrounds
-					pre: code.language-jade.
-						section.carbonfiber
-					.actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
-						.em-blue .blueprint
-						.em-blue .carbon
-						.em-orange .carbonfiber
-						.em-blue .cubes
-						.em-blue .honeycomb
-						.em-blue .paper
-						.em-blue .seigaiha
-						.em-blue .shippo
-						.em-blue .wave
-					h4 some work well with color classes to tint
-					.actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
-						.em-blue .white
-						.em-blue .red
-						.em-blue .black
-						.em-blue .grey
-						.em-blue .blue
-						.em-blue .midnight
-						.em-blue .jellybean
-						.em-blue .cocoa
+      section.carbonfiber
+        .box.notify(title="click to change", data-position="bottom center")
+          h2 CSS Backgrounds
+          pre: code.language-jade.
+            section.carbonfiber
+          .actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
+            .em-blue .blueprint
+            .em-blue .carbon
+            .em-orange .carbonfiber
+            .em-blue .cubes
+            .em-blue .honeycomb
+            .em-blue .paper
+            .em-blue .seigaiha
+            .em-blue .shippo
+            .em-blue .wave
+          h4 some work well with color classes to tint
+          .actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
+            .em-blue .black
+            .em-blue .blue
+            .em-blue .lightblue
+            .em-blue .cocoa
+            .em-blue .green
+            .em-blue .grey
+            .em-blue .jellybean
+            .em-blue .midnight
+            .em-blue .orange
+            .em-blue .red
+            .em-blue .transparent
+            .em-blue .white
+            .em-blue .yellow
 
-			section.woodtilecolor.cocoa
-				.box
-					h2 Tiny Image Tile Backgrounds
-					pre: code.language-jade.
-						section.woodtilecolor.cocoa
-					.actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
-						.em-blue .blackthread
-						.em-blue .brickwalldark
-						.em-blue .brickwall
-						.em-blue .diagmonds
-						.em-blue .diamondupholstery
-						.em-blue .gplay
-						.em-blue .gravel
-						.em-blue .oldmath
-						.em-blue .purtywood
-						.em-blue .bullseyes
-						.em-blue .escheresque
-						.em-blue .straws
-						.em-blue .subtlegrey
-						.em-orange .woodtilecolor
-						.em-blue .treebark
-						.em-blue .washi
-						.em-blue .wood-pattern
-						.em-blue .xv
-					h4 You can also add color classes to tint
-					.actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
-						.em-blue .white
-						.em-blue .red
-						.em-blue .black
-						.em-blue .grey
-						.em-blue .blue
-						.em-blue .midnight
-						.em-blue .jellybean
-						.em-orange .cocoa
+      section.woodtilecolor.cocoa
+        .box
+          h2 Tiny Image Tile Backgrounds
+          pre: code.language-jade.
+            section.woodtilecolor.cocoa
+          .actionable.background(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="color")
+            .em-blue .blackthread
+            .em-blue .brickwalldark
+            .em-blue .brickwall
+            .em-blue .diagmonds
+            .em-blue .diamondupholstery
+            .em-blue .gplay
+            .em-blue .gravel
+            .em-blue .oldmath
+            .em-blue .purtywood
+            .em-blue .bullseyes
+            .em-blue .escheresque
+            .em-blue .straws
+            .em-blue .subtlegrey
+            .em-orange .woodtilecolor
+            .em-blue .treebark
+            .em-blue .washi
+            .em-blue .wood-pattern
+            .em-blue .xv
+          h4 You can also add color classes to tint
+          .actionable.color(data-elem='section', data-classes='bespoke-slide bespoke-active', data-with="background")
+            .em-blue .black
+            .em-blue .blue
+            .em-blue .lightblue
+            .em-orange .cocoa
+            .em-blue .green
+            .em-blue .grey
+            .em-blue .jellybean
+            .em-blue .midnight
+            .em-blue .orange
+            .em-blue .red
+            .em-blue .transparent
+            .em-blue .white
+            .em-blue .yellow
 
-			section.cubes
-				.box
-					h2 Content Positioning
-					pre: code.language-jade.
-						.box
-							h2 Content Positioning
-					.actionable(data-elem='.box')
-						.em-orange (default)
-						.em-blue .top
-						.em-blue .right
-						.em-blue .bottom
-						.em-blue .left
+      section.cubes
+        .box
+          h2 Content Positioning
+          pre: code.language-jade.
+            .box
+              h2 Content Positioning
+          .actionable(data-elem='.box')
+            .em-orange (default)
+            .em-blue .top.left
+            .em-blue .top
+            .em-blue .top.right
+            br
+            .em-blue .right
+            .em-blue .bottom.right
+            .em-blue .bottom
+            .em-blue .bottom.left
+            .em-blue .left
 
-			section
-				img.fillwb(src="images/spaceman.jpg")
-				.box.bottom
-					h2 Background Image Effects
-					pre: code.language-jade.
-						section
-							img.fillwb(src="images/spaceman.jpg")
-							.box.bottom
-					.actionable(data-elem='img', data-classes='fillwb')
-						.em-orange (default)
-						.em-blue .blur1
-						.em-blue .blur2
-						.em-blue .blur3
-						.em-blue .blur4
-						.em-blue .opac20
-						.em-blue .opac50
-						.em-blue .opac80
+      section.cubes
+        .multibox
+          .box.top.left
+            h2 Top Left
+            pre: code.language-jade.
+              .multibox
+                .box.top.left
+                  h2 Top Left
+          .box.top.right
+            h2 Top Right
+            pre: code.language-jade.
+              .multibox
+                .box.top.right
+                  h2 Top Right
+          .box.bottom.left
+            h2 Bottom Left
+            pre: code.language-jade.
+              .multibox
+                .box.bottom.left
+                  h2 Bottom Left
+          .box.bottom.right
+            h2 Bottom Right
+            pre: code.language-jade.
+              .multibox
+                .box.bottom.right
+                  h2 Bottom Right
 
-			section
-				img.fillw(src="images/spaceman.jpg")
-				.box.top
-					h2 Background Image Size/Position
-					pre: code.language-jade.
-						section
-							img.fillw(src="images/spaceman.jpg")
-					.actionable(data-elem='img')
-						.em-blue (default)
-						.em-blue .fill
-						.em-blue .fillh
-						.em-orange .fillw
-						.em-blue .fillwb
+      section.cubes
+        .multibox
+          .title Title Bar
+          .box.left
+            h2 Left
+            pre: code.language-jade.
+              section.cubes
+                .multibox
+                  .title Title Bar
+                  .box.left
+                    h2 Left
+                  .box.right
+                    h2 Right
+          .box.right
+            h2 Right
+            pre: code.language-jade.
+              section.cubes
+                .multibox
+                  .title Title Bar
+                  .box.left
+                    h2 Left
+                  .box.right
+                    h2 Right
 
-			section.wave
-				.box
-					h1 Highlight Content
-					p and
-						span.em-green really
-						span.em-orange emphatic
-						span.em-red text
-						span.em-yellow colors
-						span.em-blue yo!
-					pre: code.language-jade.
-						p and
-							span.em-green really
-							span.em-orange emphatic
-							span.em-red text
-							span.em-yellow colors
-							span.em-blue yo!
+      section
+        img.fillwb(src="images/spaceman.jpg")
+        .box.bottom
+          h2 Background Image Effects
+          pre: code.language-jade.
+            section
+              img.fillwb(src="images/spaceman.jpg")
+              .box.bottom
+          .actionable(data-elem='img', data-classes='fillwb')
+            .em-orange (default)
+            .em-blue .blur1
+            .em-blue .blur2
+            .em-blue .blur3
+            .em-blue .blur4
+            .em-blue .opac20
+            .em-blue .opac50
+            .em-blue .opac80
 
-			section.shippo.jellybean
-				.box
-					h1 <span class="em-blue">.box</span> Tints
-					pre: code.language-jade.
-						section.shippo.jellybean
-							.box
-					.actionable(data-elem='.box')
-						.em-orange (default)
-						.em-blue .transparent
-						.em-blue .white
-						.em-blue .red
-						.em-blue .black
-						.em-blue .grey
-						.em-blue .blue
-						.em-blue .midnight
-						.em-blue .jellybean
-						.em-blue .cocoa
+      section
+        img.fillw(src="images/spaceman.jpg")
+        .box.top
+          h2 Background Image Size/Position
+          pre: code.language-jade.
+            section
+              img.fillw(src="images/spaceman.jpg")
+          .actionable(data-elem='img')
+            .em-blue (default)
+            .em-blue .fill
+            .em-blue .fillh
+            .em-orange .fillw
+            .em-blue .fillwb
 
-			section
-				h1.bullet Paragraph
-				p.bullet bullet content
-				h2 and this is a
-					span.nope bad
-					| &nbsp;great thing
-				pre: code.language-jade.
-					section
-						h1.bullet Paragraph
-						p.bullet bullet content
-						h2 and this is a
-							span.nope bad
-							| &nbsp;great thing
+      section.wave
+        .box
+          h1 Highlight Content
+          p
+            span.em-green really
+            span.em-orange emphatic
+            span.em-red text
+            span.em-yellow colors
+            span.em-blue yo!
+            span.em-grey grey!
+            span.em-white white!
+          pre: code.language-jade.
+            p
+              span.em-green really
+              span.em-orange emphatic
+              span.em-red text
+              span.em-yellow colors
+              span.em-blue yo!
+              span.em-grey grey!
+              span.em-white white!
 
-			section.cocoa.diagmonds
-				.box
-					h1 h1 Heading
-					h2 h2 Heading
-					h3 h3 Heading
-					h4 h4 Heading
-					h5 h5 Heading
+      section.shippo.jellybean
+        .box
+          h1 <span class="em-blue">.box</span> Tints
+          pre: code.language-jade.
+            section.shippo.jellybean
+              .box
+          .actionable(data-elem='.box')
+            .em-orange (default)
+            .em-blue .transparent
+            .em-blue .white
+            .em-blue .red
+            .em-blue .black
+            .em-blue .grey
+            .em-blue .blue
+            .em-blue .midnight
+            .em-blue .jellybean
+            .em-blue .cocoa
 
-			section.gplay.jellybean
-				.box
-					h1 Blinking Cursor
-					h2.cursor Engaging Dyson Sphere
-					pre: code.language-jade.
-						h2.cursor Engaging Dyson Sphere
+      section
+        h1.bullet Paragraph
+        p.bullet bullet content
+        h2 and this is a
+          span.nope bad
+          | &nbsp;great thing
+        pre: code.language-jade.
+          section
+            h1.bullet Paragraph
+            p.bullet bullet content
+            h2 and this is a
+              span.nope bad
+              | &nbsp;great thing
 
-			section.blue
-				.fullscreen
-					x-gif(src="images/perfect_horse.gif" fill n-times=2)
-				.box
-					h1 Text Styles
-					p this is a p tag
-					p.code and a p.code tag is monospace
-					.mid but
-					p ^ is .mid
+      section.cocoa.diagmonds
+        .box
+          h1 h1 Heading
+          h2 h2 Heading
+          h3 h3 Heading
+          h4 h4 Heading
+          h5 h5 Heading
 
-			section.jellybean
-				.box
-					h1 Key Activated Animations
-					h2 hit the
-						span.em-orange r
-						| &nbsp;key to activate
-					h2: span.em-green .rotate
-					h1.rotate \[._.]/
-					h2: span.em-green .spin
-					h1.spin \[._.]/
+      section.gplay.jellybean
+        .box
+          h1 Blinking Cursor
+          h2.cursor Engaging Dyson Sphere
+          pre: code.language-jade.
+            h2.cursor Engaging Dyson Sphere
 
-					p you can automatically activate by adding the <span class="em-green">.on</span> class
+      section.blue
+        .fullscreen
+          x-gif(src="images/perfect_horse.gif" fill n-times=2)
+        .box
+          h1 Text Styles
+          p this is a p tag
+          p.code and a p.code tag is monospace
+          .mid but
+          p ^ is .mid
 
-			section.gplay.cocoa
-				.box
-					h1 Slide Activated Animations
-					h2 The <span class="animated bounce">theme</span> also includes&nbsp;
-						a(href="https://daneden.github.io/animate.css/" target="off") Animate.css
-					h1.animated.pulse \[._.]/
-					h1.animated.rotateIn \[._.]/
-					h1.animated.jello \[._.]/
-					pre: code.language-jade.
-						h1.animated.pulse \[._.]/
-						h1.animated.rotateIn \[._.]/
-						h1.animated.jello \[._.]/
+      section.jellybean
+        .box
+          h1 Key Activated Animations
+          h2 hit the
+            span.em-orange r
+            | &nbsp;key to activate
+          h2: span.em-green .rotate
+          h1.rotate \[._.]/
+          h2: span.em-green .spin
+          h1.spin \[._.]/
 
-			section.cocoa.purtywood
-				.box
-					h1 Unordered Lists
-					ul
-						li Section 1
-							ul
-								li Awesome things
-								li Even more awesome
-						li Section 2
-							ul
-								li Continue Awesome
-								li Advanced
-						li Keeping it real
+          p you can automatically activate by adding the <span class="em-green">.on</span> class
 
-			section.cocoa.woodtilecolor
-				.box
-					h1 Ordered Lists
-					ol
-						li Section 1
-							ol
-								li Awesome things
-								li Even more awesome
-						li Section 2
-							ol
-								li Continue Awesome
-								li Advanced
-						li Keeping it real
+      section.gplay.cocoa
+        .box
+          h1 Slide Activated Animations
+          h2 The <span class="animated bounce">theme</span> also includes&nbsp;
+            a(href="https://daneden.github.io/animate.css/" target="off") Animate.css
+          h1.animated.pulse \[._.]/
+          h1.animated.rotateIn \[._.]/
+          h1.animated.jello \[._.]/
+          pre: code.language-jade.
+            h1.animated.pulse \[._.]/
+            h1.animated.rotateIn \[._.]/
+            h1.animated.jello \[._.]/
 
-			section
-				.fullscreen.blur1
-					x-gif(src="images/slow_clap_citizen_kane.gif" fill n-times=8 stopped)
-				.box
-					.mid Thanks!
-					.line
-						.me.center
-					h2 \[._.]/ Adam Eivy
-					h3: a(href='https://twitter.com/antic') &nbsp; @antic
-					small: a.back(href='#1') &nbsp; restart
-					h4
-						span buy me a
-						a(href="https://beerpay.io/atomantic/bespoke-theme-atomantic")
-							img(src="https://beerpay.io/atomantic/bespoke-theme-atomantic/badge.svg?style=beer-square")
+      section.cocoa.purtywood
+        .box
+          h1 Unordered Lists
+          ul
+            li Section 1
+              ul
+                li Awesome things
+                li Even more awesome
+            li Section 2
+              ul
+                li Continue Awesome
+                li Advanced
+            li Keeping it real
 
-		a(href='https://github.com/atomantic/bespoke-theme-atomantic')
-			img(style='position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;', src='images/right-grey@2x.png' alt='Fork me on GitHub')
+      section.cocoa.woodtilecolor
+        .box
+          h1 Ordered Lists
+          ol
+            li Section 1
+              ol
+                li Awesome things
+                li Even more awesome
+            li Section 2
+              ol
+                li Continue Awesome
+                li Advanced
+            li Keeping it real
 
-		script(src='build/build.js')
+      section
+        .fullscreen
+          img.fill(src="images/nasa-Q1p7bh3SHj8-unsplash.jpg")
+          .credit credit:&nbsp;
+            a(href="https://unsplash.com/@nasa") NASA
+        .box
+          h1 Background Image Credits
+          pre: code.language-jade.
+            section
+              .fullscreen
+                img.fill(src="images/nasa-Q1p7bh3SHj8-unsplash.jpg")
+                .credit credit:&nbsp;
+                  a(href="https://unsplash.com/@nasa",target="off") NASA
+              .box
+                h1 Background Image Credits
+
+
+      section
+        .fullscreen.blur1
+          x-gif(src="images/slow_clap_citizen_kane.gif" fill n-times=8 stopped)
+        .box.left
+          h1.mid Cheers!
+          .line
+            .me.center
+          h2
+            span.notranslate.emoticon.rocking \[._.]/
+            span.notranslate &nbsp; <a href="https://adameivy.com" target="off">Adam Eivy</a>
+          blockquote
+            h3
+              a(href='https://twitter.com/antic')
+                i.fa.fa-twitter-square
+                | &nbsp;@antic
+            h3
+              a(href='https://github.com/atomantic')
+                i.fa.fa-github-square
+                | &nbsp;/atomantic
+          small: a.back(href='#1') &nbsp; restart
+
+    a(href='https://github.com/atomantic/bespoke-theme-atomantic')
+      img(style='position: absolute; top: 0; right: 0; border: 0; width: 25vw; max-width: 149px;', src='images/right-grey@2x.png' alt='Fork me on GitHub')
+
+    script(src='build.js')

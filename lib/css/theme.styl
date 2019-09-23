@@ -1,0 +1,419 @@
+// Bespoke Classes: https://github.com/markdalgleish/bespoke-classes
+// Stylus: http://learnboost.github.io/stylus
+
+@import 'normalizecss/normalize.css'
+@import 'animate.css/animate.min.css'
+/*@import 'prismjs/themes/prism-dark.css'*/
+
+/*
+ * variables
+ */
+$background = #111
+$serif = didot, times new roman, serif
+$sans-serif = "Droid Sans", futura, helvetica, arial, arial, sans-serif
+$script = "Courgette", "EB Garamond", Georgia, cursive
+$monospace = prestige elite std, consolas, courier new, monospace
+$emdash = '\2014'
+
+body
+  font: 18px/1.5 $sans-serif
+  font-weight:100
+  color: rgba(255, 255, 255, 0.95)
+  text-shadow: 0 0 2px black, 0 0 40px black
+
+h1 {
+  font-size: 50px;
+  margin: 0 auto;
+  font-weight: 900;
+  margin-bottom:10px;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-bottom:5px;
+}
+
+h3 {
+  font-size: 28px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 22px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+h5 {
+  font-size: 18px;
+  margin: 0 auto;
+  font-weight: 200;
+}
+
+ul,ol
+  font-size: 32px
+  font-weight: 400
+  &.noprefix
+    list-style: none
+    ol,ul
+      list-style: none
+      li
+        margin-left:0
+        &::before
+          content:none
+    li
+      margin-left:0
+      &::before
+        content:none
+  ul
+    margin-left: 30px
+    li
+      margin-bottom: 0
+      line-height: 1.4em
+  ol
+    list-style-type: lower-roman
+    margin-left: 30px
+    li
+      margin-bottom: 0
+      line-height: 1.4em
+li
+  margin-bottom: 12px
+  text-align: left
+  width: 100%
+  margin-left: 0.5em
+blockquote
+  text-align:left
+
+td,th
+  padding:10px
+  border: 1px solid #ccc
+th
+  background-color:#333
+td
+  background-color: #444
+  text-shadow:none
+pre
+  border-radius: 8px
+  padding:10px
+  text-align:left
+  .em-red, .em-yellow,.em-green,.em-blue,.em-orange
+      margin: 5px 0
+
+.bespoke-parent
+  text-size-adjust: auto
+  background: $background
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+  transition: background 1s ease
+  background-position: 50% 50%
+
+.bespoke-scale-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  pointer-events: none
+  .bespoke-active
+    pointer-events: auto
+
+.bespoke-slide
+  width: 100%
+  height: 100%
+  position: absolute
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &.x-gif-finished .wait-for-gif
+    opacity: 1
+
+x-gif[stopped] + .wait-for-gif
+  opacity: 1
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-bullet-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-backdrop
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: -1
+  opacity: 0
+
+.bespoke-backdrop-active
+  opacity: 1
+
+.bespoke-progress-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: .3vw
+
+.bespoke-progress-bar
+  position: absolute
+  height: 100%
+  background: #ccc
+  transition: width .6s ease
+
+/*
+ * background modifiers
+ */
+section > img
+  position: absolute
+  margin: auto
+  display: flex
+.fullscreen
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+/* .fullscreen img classes */
+.fill
+  width: 100%
+  height: 100%
+.fillh
+  height: 100%
+  left:-50%
+  right:-50%
+  position:absolute
+  margin:auto
+.fillw
+  width: 100%
+  height: auto
+.fillwb
+  width: 100%
+  height: auto
+  bottom: 0
+
+section
+  x-gif
+    position:absolute
+    top:0
+    left:0
+/*
+ * boxed content
+ */
+.box
+  position:relative
+  text-align:center
+  margin:auto
+  max-width:100%
+  border-radius: 10px
+  padding: 25px
+  background-color: rgba(0, 0, 0, 0.6)
+  ul,ol
+    margin: 12px 20px
+    padding:0
+  li
+    &::before
+      left: 0.5em
+  &.wait-for-gif
+    opacity: 0
+  &.bottom
+    bottom:5%
+    margin-bottom: 0
+  &.top
+    top: 5%
+    margin-top: 0
+  &.left
+    left: 5%
+    margin-left:0
+  &.right
+    right: 5%
+    margin-right: 0
+  &.transparent
+    pre
+      display:inline-block
+
+
+.multibox
+  width:100%
+  height:100%
+  display:table
+  &.top
+    top: 2%
+    margin-top: 0
+  > .title
+    background-color: rgba(0,0,0,.6)
+    padding:5px
+    text-align:center
+    margin:0 0 20px 0
+  > .foot
+    background-color: rgba(0,0,0,.6)
+    padding:5px
+    text-align:center
+    position:absolute
+    bottom:2%
+    width:100%
+  .box.right,.box.left,.box.top
+    float:left
+    max-width:43%
+    position:relative
+    &.bottom
+      position:absolute
+      bottom:2%
+      margin-bottom: 0
+    &.top
+      margin-top:30px
+    &.right
+      float:right
+      right:2%
+    &.left
+      left:2%
+  &.full
+    .box.left
+      left:1%
+    .box.right
+      right:1%
+
+/*
+ * links
+ */
+a
+  color: #9cf
+  text-decoration: none
+a:after
+  content: '  ➭'
+  font-size: 24px
+  line-height: 24px
+  vertical-align: middle
+a.back
+  &:before
+    content: '⬅  '
+    font-size: 24px
+    line-height: 24px
+    vertical-align: middle
+  &:after
+    content: ''
+    font-size: 24px
+    line-height: 24px
+    vertical-align: middle
+
+/*
+ * people
+ */
+$me-height = 72px
+.person
+  height: $me-height
+  width: $me-height
+  background-repeat: no-repeat
+  background-size: $me-height
+  background-position: 50% 50%
+  border-radius: 50%
+  box-shadow: 0 0 0 2px #000,0 0 0 4px #472f00
+  margin: 0 16px
+  &.center
+    margin: 15px auto
+.credit
+  .person
+    position:relative
+.me
+  @extend .person
+  background-image: url("/images/me.jpg")
+
+.mid
+  font-size: 28px
+  font-style: italic
+  display: flex
+  width: 100%
+  margin:10px auto
+  align-items: center
+  &::before,
+  &::after
+    content: ''
+    flex-grow: 1
+    display: block
+    border-top: dotted 1px rgba(white, 0.3)
+  &::before
+    margin-right: 16px
+  &::after
+    margin-left: 16px
+  &.big
+    font-size: 74px
+
+.hide
+  display:none
+
+.blur1
+  filter: blur(1px)
+.blur2
+  filter: blur(2px)
+.blur3
+  filter: blur(3px)
+.blur4
+  filter: blur(4px)
+.opac20
+  opacity: 0.2
+.opac50
+  opacity: 0.5
+.opac60
+  opacity: 0.6
+.opac70
+  opacity: 0.7
+.opac80
+  opacity: 0.8
+.opac90
+  opacity: 0.9
+
+/* text helpers */
+.nope
+  text-decoration: line-through
+  opacity: .7
+
+p.code
+  margin:0
+  font-family: $monospace
+
+/* code that you should not do */
+strike
+  code[class*="language-"]
+    text-shadow: 0 1px blue
+
+/*box zooms*/
+.z50
+  zoom:50%
+.z80
+  zoom:80%
+.z120
+  zoom:120%
+.z150
+  zoom:150%
+.z200
+  zoom:200%
+
+.credit
+  position: absolute
+  bottom: 10px
+  right: 10px
+  z-index:1000
+  text-shadow:none
+  position:absolute
+  a
+    color:#fff
+  &.left
+    left:0
+    text-align:left
+    margin-left:10px
+
+@import 'animations'
+@import 'backgrounds'
+@import 'background-colors'
+@import 'em'
+@import 'notify'
+@import 'toasty'
