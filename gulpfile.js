@@ -94,7 +94,7 @@ gulp.task('browserify:lib', gulp.series('stylus', function() {
     .pipe(gulp.dest('./dist'));
 }));
 
-gulp.task('browserify:demo', gulp.series('stylus', function() {
+gulp.task('browserify:demo', gulp.series(function() {
     var b = browserify({ transform: ['brfs']});
     b.add('./demo/src/scripts/main.js');
 
