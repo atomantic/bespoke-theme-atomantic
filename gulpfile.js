@@ -15,7 +15,7 @@ var gulp = require('gulp'),
   browserify = require('browserify'),
   through = require('through'),
   path = require('path'),
-  ghpages = require('gh-pages'),
+  ghpages = require('gulp-gh-pages'),
   streamify = require('gulp-streamify'),
   template = require('lodash').template,
   source = require('vinyl-source-stream'),
@@ -151,11 +151,7 @@ gulp.task('images', gulp.series('patterns', function() {
 
 gulp.task('compile:demo', gulp.series('pug', 'images', 'democss', 'xgif', 'browserify:demo'));
 
-gulp.task('deploy', gulp.series('compile:demo', function(done) {
-  console.log('publishing')
-  ghpages.publish(path.join(__dirname, 'demo/dist'), { logger: gutil.log }, done);
-}));
-
+gulp.task('deploy', () => gulp.src('./demo/dist/**/*').pipe(ghpages()))
 
 gulp.task('compile:lib', gulp.series('stylus', 'browserify'));
 gulp.task('compile', gulp.series('compile:lib', 'compile:demo'));

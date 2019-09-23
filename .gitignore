@@ -3,3 +3,4 @@ bower_components
 lib/tmp
 .DS_Store
 demo/dist
+.publish
