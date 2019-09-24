@@ -1,5 +1,5 @@
 /*!
- * bespoke-theme-atomantic v2.2.2
+ * bespoke-theme-atomantic v2.2.3
  *
  * Copyright 2019, Adam Eivy
  * This content is released under the MIT license
@@ -139,7 +139,7 @@ document.body.appendChild(link);
 var fontLink = document.createElement('link');
 fontLink.rel = "stylesheet";
 fontLink.type = "text/css";
-fontLink.href = "http://fonts.googleapis.com/css?family=Courgette|Droid+Sans";
+fontLink.href = "//fonts.googleapis.com/css?family=Courgette|Droid+Sans";
 document.head.appendChild(fontLink);
 
 $.notify.addStyle("instructions", {
