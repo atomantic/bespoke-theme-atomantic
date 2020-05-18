@@ -1,6 +1,6 @@
 {
   "name": "bespoke-theme-atomantic",
-  "version": "2.2.6",
+  "version": "3.0.0",
   "description": "A theme for Bespoke.js using x-gif",
   "homepage": "https://github.com/atomantic/bespoke-theme-atomantic",
   "bugs": "https://github.com/atomantic/bespoke-theme-atomantic/issues",
@@ -52,7 +52,6 @@
     "jquery": "3.5.1",
     "lodash": "4.17.15",
     "normalizecss": "3.0.0",
-    "notifyjs-browser": "0.4.2",
     "opn": "6.0.0",
     "prismjs": "1.20.0",
     "through": "2.3.8",
