@@ -34,9 +34,10 @@ var xgif = function (deck) {
 };
 var activeAnimations = function (deck) {
   deck.on('activate', function (e) {
-    console.log('acivate slide')
-    Array.prototype.forEach.call((e.slide.querySelectorAll('.animated') || []), function (el) {
-      el.outerHTML = el.outerHTML.replace('animated', 'animate animated');
+    // console.log('acivate slide')
+    Array.prototype.forEach.call((e.slide.querySelectorAll('.animate__animation') || []), function (el) {
+      // jiggle the handle
+      el.outerHTML = el.outerHTML.replace(/animate__animation/g, 'animate__animated');
     });
     [].forEach.call(document.querySelectorAll('x-gif'), function (elem) {
       elem.removeAttribute('stopped');
@@ -121,9 +122,10 @@ document.addEventListener('keyup', function (e) {
 });
 
 // un-animate when we finish, so we can animate again when we toggle back and forth onto this slide
-var animations = document.querySelectorAll('.animate');
+var animations = document.querySelectorAll('.animate__animated');
 var onAnimComplete = function (e) {
-  e.target.classList.remove('animated');
+  e.target.classList.add('animate__animation');
+  e.target.classList.remove('animate__animated');
 };
 Array.prototype.forEach.call(animations, function (el, i) {
   el.addEventListener('webkitAnimationEnd', onAnimComplete);
